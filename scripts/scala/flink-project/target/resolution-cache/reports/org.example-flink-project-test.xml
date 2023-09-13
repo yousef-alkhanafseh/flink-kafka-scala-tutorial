@@ -7,241 +7,151 @@
 		revision="0.1-SNAPSHOT"
 		conf="test"
 		confs="compile, runtime, test, provided, optional, compile-internal, runtime-internal, test-internal, plugin, pom, scala-tool"
-		date="20230823212713"/>
+		date="20230913232951"/>
 	<dependencies>
+		<module organisation="org.scala-lang" name="scala-compiler">
+			<revision name="2.11.8" status="release" pubdate="20160304172647" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://www.scala-lang.org/" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="38">
+				<license name="BSD 3-Clause" url="http://www.scala-lang.org/license.html"/>
+				<metadata-artifact status="no" details="" size="3259" time="0" location="/home/alkhanafseh/.ivy2/cache/org.scala-lang/scala-compiler/ivy-2.11.8.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/scala-lang/scala-compiler/2.11.8/scala-compiler-2.11.8.pom"/>
+				<caller organisation="org.apache.flink" name="flink-scala_2.11" conf="compile, runtime" rev="2.11.8" rev-constraint-default="2.11.8" rev-constraint-dynamic="2.11.8" callerrev="1.14.3"/>
+				<artifacts>
+					<artifact name="scala-compiler" type="jar" ext="jar" status="no" details="" size="15487351" time="0" location="/home/alkhanafseh/.ivy2/cache/org.scala-lang/scala-compiler/jars/scala-compiler-2.11.8.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/scala-lang/scala-compiler/2.11.8/scala-compiler-2.11.8.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.scala-lang.modules" name="scala-parser-combinators_2.11">
+			<revision name="1.0.4" status="release" pubdate="20150430170747" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://www.scala-lang.org/" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="40">
+				<license name="BSD 3-clause" url="http://opensource.org/licenses/BSD-3-Clause"/>
+				<metadata-artifact status="no" details="" size="2929" time="0" location="/home/alkhanafseh/.ivy2/cache/org.scala-lang.modules/scala-parser-combinators_2.11/ivy-1.0.4.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/scala-lang/modules/scala-parser-combinators_2.11/1.0.4/scala-parser-combinators_2.11-1.0.4.pom"/>
+				<caller organisation="org.scala-lang" name="scala-compiler" conf="compile, runtime" rev="1.0.4" rev-constraint-default="1.0.4" rev-constraint-dynamic="1.0.4" callerrev="2.11.8"/>
+				<artifacts>
+					<artifact name="scala-parser-combinators_2.11" type="bundle" ext="jar" status="no" details="" size="423753" time="0" location="/home/alkhanafseh/.ivy2/cache/org.scala-lang.modules/scala-parser-combinators_2.11/bundles/scala-parser-combinators_2.11-1.0.4.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/scala-lang/modules/scala-parser-combinators_2.11/1.0.4/scala-parser-combinators_2.11-1.0.4.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.scala-lang.modules" name="scala-xml_2.11">
+			<revision name="1.0.4" status="release" pubdate="20150430165302" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://www.scala-lang.org/" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="39">
+				<license name="BSD 3-clause" url="http://opensource.org/licenses/BSD-3-Clause"/>
+				<metadata-artifact status="no" details="" size="3137" time="0" location="/home/alkhanafseh/.ivy2/cache/org.scala-lang.modules/scala-xml_2.11/ivy-1.0.4.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/scala-lang/modules/scala-xml_2.11/1.0.4/scala-xml_2.11-1.0.4.pom"/>
+				<caller organisation="org.scala-lang" name="scala-compiler" conf="compile, runtime" rev="1.0.4" rev-constraint-default="1.0.4" rev-constraint-dynamic="1.0.4" callerrev="2.11.8"/>
+				<artifacts>
+					<artifact name="scala-xml_2.11" type="bundle" ext="jar" status="no" details="" size="647891" time="0" location="/home/alkhanafseh/.ivy2/cache/org.scala-lang.modules/scala-xml_2.11/bundles/scala-xml_2.11-1.0.4.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/scala-lang/modules/scala-xml_2.11/1.0.4/scala-xml_2.11-1.0.4.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
 		<module organisation="org.scala-lang" name="scala-reflect">
-			<revision name="2.12.8" status="release" pubdate="20181204131524" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://www.scala-lang.org/" extra-info.apiURL="http://www.scala-lang.org/api/2.12.8/" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="45">
-				<license name="Apache-2.0" url="https://www.apache.org/licenses/LICENSE-2.0"/>
-				<metadata-artifact status="no" details="" size="2828" time="0" location="/home/alkhanafseh/.ivy2/cache/org.scala-lang/scala-reflect/ivy-2.12.8.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/scala-lang/scala-reflect/2.12.8/scala-reflect-2.12.8.pom"/>
-				<caller organisation="com.typesafe.play" name="play-json_2.12" conf="default, compile, runtime, master" rev="2.12.8" rev-constraint-default="2.12.8" rev-constraint-dynamic="2.12.8" callerrev="2.10.0-RC9"/>
+			<revision name="2.11.8" status="release" pubdate="20160304172641" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://www.scala-lang.org/" extra-info.apiURL="http://www.scala-lang.org/api/2.11.8/" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="37">
+				<license name="BSD 3-Clause" url="http://www.scala-lang.org/license.html"/>
+				<metadata-artifact status="no" details="" size="2825" time="0" location="/home/alkhanafseh/.ivy2/cache/org.scala-lang/scala-reflect/ivy-2.11.8.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/scala-lang/scala-reflect/2.11.8/scala-reflect-2.11.8.pom"/>
+				<caller organisation="org.apache.flink" name="flink-scala_2.11" conf="compile, runtime" rev="2.11.8" rev-constraint-default="2.11.8" rev-constraint-dynamic="2.11.8" callerrev="1.14.3"/>
+				<caller organisation="org.scala-lang" name="scala-compiler" conf="compile, runtime" rev="2.11.8" rev-constraint-default="2.11.8" rev-constraint-dynamic="2.11.8" callerrev="2.11.8"/>
 				<artifacts>
-					<artifact name="scala-reflect" type="jar" ext="jar" status="no" details="" size="3645095" time="0" location="/home/alkhanafseh/.ivy2/cache/org.scala-lang/scala-reflect/jars/scala-reflect-2.12.8.jar">
-						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/scala-lang/scala-reflect/2.12.8/scala-reflect-2.12.8.jar"/>
+					<artifact name="scala-reflect" type="jar" ext="jar" status="no" details="" size="4573750" time="0" location="/home/alkhanafseh/.ivy2/cache/org.scala-lang/scala-reflect/jars/scala-reflect-2.11.8.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/scala-lang/scala-reflect/2.11.8/scala-reflect-2.11.8.jar"/>
 					</artifact>
 				</artifacts>
 			</revision>
 		</module>
-		<module organisation="com.typesafe.play" name="play-json_2.12">
-			<revision name="2.10.0-RC9" status="release" pubdate="20230605014306" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://github.com/playframework/play-json" extra-info.apiURL="https://www.playframework.com/documentation/latest/api/scala/" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="43">
-				<license name="Apache-2.0" url="https://www.apache.org/licenses/LICENSE-2.0.html"/>
-				<metadata-artifact status="no" details="" size="5040" time="0" location="/home/alkhanafseh/.ivy2/cache/com.typesafe.play/play-json_2.12/ivy-2.10.0-RC9.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/typesafe/play/play-json_2.12/2.10.0-RC9/play-json_2.12-2.10.0-RC9.pom"/>
-				<caller organisation="org.example" name="flink-project" conf="test, compile, runtime" rev="2.10.0-RC9" rev-constraint-default="2.10.0-RC9" rev-constraint-dynamic="2.10.0-RC9" callerrev="0.1-SNAPSHOT"/>
-				<artifacts>
-					<artifact name="play-json_2.12" type="jar" ext="jar" status="no" details="" size="787092" time="0" location="/home/alkhanafseh/.ivy2/cache/com.typesafe.play/play-json_2.12/jars/play-json_2.12-2.10.0-RC9.jar">
-						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/typesafe/play/play-json_2.12/2.10.0-RC9/play-json_2.12-2.10.0-RC9.jar"/>
-					</artifact>
-				</artifacts>
-			</revision>
-		</module>
-		<module organisation="com.fasterxml.jackson.datatype" name="jackson-datatype-jsr310">
-			<revision name="2.14.3" status="release" pubdate="20230505210854" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="50">
-				<license name="The Apache Software License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
-				<metadata-artifact status="no" details="" size="36032" time="0" location="/home/alkhanafseh/.ivy2/cache/com.fasterxml.jackson.datatype/jackson-datatype-jsr310/ivy-2.14.3.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/fasterxml/jackson/datatype/jackson-datatype-jsr310/2.14.3/jackson-datatype-jsr310-2.14.3.pom"/>
-				<caller organisation="com.typesafe.play" name="play-json_2.12" conf="default, compile, runtime, master" rev="2.14.3" rev-constraint-default="2.14.3" rev-constraint-dynamic="2.14.3" callerrev="2.10.0-RC9"/>
-				<artifacts>
-					<artifact name="jackson-datatype-jsr310" type="bundle" ext="jar" status="no" details="" size="122545" time="0" location="/home/alkhanafseh/.ivy2/cache/com.fasterxml.jackson.datatype/jackson-datatype-jsr310/bundles/jackson-datatype-jsr310-2.14.3.jar">
-						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/fasterxml/jackson/datatype/jackson-datatype-jsr310/2.14.3/jackson-datatype-jsr310-2.14.3.jar"/>
-					</artifact>
-				</artifacts>
-			</revision>
-		</module>
-		<module organisation="com.fasterxml.jackson.datatype" name="jackson-datatype-jdk8">
-			<revision name="2.14.3" status="release" pubdate="20230505210857" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="48">
-				<license name="The Apache Software License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
-				<metadata-artifact status="no" details="" size="35739" time="0" location="/home/alkhanafseh/.ivy2/cache/com.fasterxml.jackson.datatype/jackson-datatype-jdk8/ivy-2.14.3.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/fasterxml/jackson/datatype/jackson-datatype-jdk8/2.14.3/jackson-datatype-jdk8-2.14.3.pom"/>
-				<caller organisation="com.typesafe.play" name="play-json_2.12" conf="default, compile, runtime, master" rev="2.14.3" rev-constraint-default="2.14.3" rev-constraint-dynamic="2.14.3" callerrev="2.10.0-RC9"/>
-				<artifacts>
-					<artifact name="jackson-datatype-jdk8" type="bundle" ext="jar" status="no" details="" size="36109" time="0" location="/home/alkhanafseh/.ivy2/cache/com.fasterxml.jackson.datatype/jackson-datatype-jdk8/bundles/jackson-datatype-jdk8-2.14.3.jar">
-						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/fasterxml/jackson/datatype/jackson-datatype-jdk8/2.14.3/jackson-datatype-jdk8-2.14.3.jar"/>
-					</artifact>
-				</artifacts>
-			</revision>
-		</module>
-		<module organisation="com.fasterxml.jackson.core" name="jackson-databind">
-			<revision name="2.14.3" status="release" pubdate="20230505193240" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://github.com/FasterXML/jackson" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="49">
+		<module organisation="org.apache.flink" name="flink-clients_2.11">
+			<revision name="1.14.3" status="release" pubdate="20220109184456" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="6">
 				<license name="The Apache Software License, Version 2.0" url="https://www.apache.org/licenses/LICENSE-2.0.txt"/>
-				<metadata-artifact status="no" details="" size="29555" time="0" location="/home/alkhanafseh/.ivy2/cache/com.fasterxml.jackson.core/jackson-databind/ivy-2.14.3.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/fasterxml/jackson/core/jackson-databind/2.14.3/jackson-databind-2.14.3.pom"/>
-				<caller organisation="com.typesafe.play" name="play-json_2.12" conf="default, compile, runtime, master" rev="2.14.3" rev-constraint-default="2.14.3" rev-constraint-dynamic="2.14.3" callerrev="2.10.0-RC9"/>
-				<caller organisation="com.fasterxml.jackson.datatype" name="jackson-datatype-jsr310" conf="compile, runtime" rev="2.14.3" rev-constraint-default="2.14.3" rev-constraint-dynamic="2.14.3" callerrev="2.14.3"/>
-				<caller organisation="com.fasterxml.jackson.datatype" name="jackson-datatype-jdk8" conf="compile, runtime" rev="2.14.3" rev-constraint-default="2.14.3" rev-constraint-dynamic="2.14.3" callerrev="2.14.3"/>
+				<metadata-artifact status="no" details="" size="45225" time="0" location="/home/alkhanafseh/.ivy2/cache/org.apache.flink/flink-clients_2.11/ivy-1.14.3.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/apache/flink/flink-clients_2.11/1.14.3/flink-clients_2.11-1.14.3.pom"/>
+				<caller organisation="org.example" name="flink-project" conf="test, compile, runtime" rev="1.14.3" rev-constraint-default="1.14.3" rev-constraint-dynamic="1.14.3" callerrev="0.1-SNAPSHOT"/>
 				<artifacts>
-					<artifact name="jackson-databind" type="bundle" ext="jar" status="no" details="" size="1617187" time="0" location="/home/alkhanafseh/.ivy2/cache/com.fasterxml.jackson.core/jackson-databind/bundles/jackson-databind-2.14.3.jar">
-						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/fasterxml/jackson/core/jackson-databind/2.14.3/jackson-databind-2.14.3.jar"/>
+					<artifact name="flink-clients_2.11" type="jar" ext="jar" status="no" details="" size="205916" time="0" location="/home/alkhanafseh/.ivy2/cache/org.apache.flink/flink-clients_2.11/jars/flink-clients_2.11-1.14.3.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/apache/flink/flink-clients_2.11/1.14.3/flink-clients_2.11-1.14.3.jar"/>
 					</artifact>
 				</artifacts>
 			</revision>
 		</module>
-		<module organisation="com.fasterxml.jackson.core" name="jackson-annotations">
-			<revision name="2.14.3" status="release" pubdate="20230505173327" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://github.com/FasterXML/jackson" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="47">
+		<module organisation="org.apache.flink" name="flink-streaming-java_2.11">
+			<revision name="1.14.3" status="release" pubdate="20220109184243" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="34">
 				<license name="The Apache Software License, Version 2.0" url="https://www.apache.org/licenses/LICENSE-2.0.txt"/>
-				<metadata-artifact status="no" details="" size="8369" time="0" location="/home/alkhanafseh/.ivy2/cache/com.fasterxml.jackson.core/jackson-annotations/ivy-2.14.3.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/fasterxml/jackson/core/jackson-annotations/2.14.3/jackson-annotations-2.14.3.pom"/>
-				<caller organisation="com.typesafe.play" name="play-json_2.12" conf="default, compile, runtime, master" rev="2.14.3" rev-constraint-default="2.14.3" rev-constraint-dynamic="2.14.3" callerrev="2.10.0-RC9"/>
-				<caller organisation="com.fasterxml.jackson.datatype" name="jackson-datatype-jsr310" conf="compile, runtime" rev="2.14.3" rev-constraint-default="2.14.3" rev-constraint-dynamic="2.14.3" callerrev="2.14.3"/>
-				<caller organisation="com.fasterxml.jackson.core" name="jackson-databind" conf="compile, runtime" rev="2.14.3" rev-constraint-default="2.14.3" rev-constraint-dynamic="2.14.3" callerrev="2.14.3"/>
+				<metadata-artifact status="no" details="" size="45432" time="0" location="/home/alkhanafseh/.ivy2/cache/org.apache.flink/flink-streaming-java_2.11/ivy-1.14.3.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/apache/flink/flink-streaming-java_2.11/1.14.3/flink-streaming-java_2.11-1.14.3.pom"/>
+				<caller organisation="org.apache.flink" name="flink-clients_2.11" conf="default, compile, runtime, master" rev="1.14.3" rev-constraint-default="1.14.3" rev-constraint-dynamic="1.14.3" callerrev="1.14.3"/>
 				<artifacts>
-					<artifact name="jackson-annotations" type="bundle" ext="jar" status="no" details="" size="76636" time="0" location="/home/alkhanafseh/.ivy2/cache/com.fasterxml.jackson.core/jackson-annotations/bundles/jackson-annotations-2.14.3.jar">
-						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/fasterxml/jackson/core/jackson-annotations/2.14.3/jackson-annotations-2.14.3.jar"/>
+					<artifact name="flink-streaming-java_2.11" type="jar" ext="jar" status="no" details="" size="1474883" time="0" location="/home/alkhanafseh/.ivy2/cache/org.apache.flink/flink-streaming-java_2.11/jars/flink-streaming-java_2.11-1.14.3.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/apache/flink/flink-streaming-java_2.11/1.14.3/flink-streaming-java_2.11-1.14.3.jar"/>
 					</artifact>
 				</artifacts>
 			</revision>
 		</module>
-		<module organisation="com.fasterxml.jackson.core" name="jackson-core">
-			<revision name="2.14.3" status="release" pubdate="20230505190357" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://github.com/FasterXML/jackson-core" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="46">
+		<module organisation="org.apache.flink" name="flink-scala_2.11">
+			<revision name="1.14.3" status="release" pubdate="20220109181547" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="36">
 				<license name="The Apache Software License, Version 2.0" url="https://www.apache.org/licenses/LICENSE-2.0.txt"/>
-				<metadata-artifact status="no" details="" size="28644" time="0" location="/home/alkhanafseh/.ivy2/cache/com.fasterxml.jackson.core/jackson-core/ivy-2.14.3.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/fasterxml/jackson/core/jackson-core/2.14.3/jackson-core-2.14.3.pom"/>
-				<caller organisation="com.typesafe.play" name="play-json_2.12" conf="default, compile, runtime, master" rev="2.14.3" rev-constraint-default="2.14.3" rev-constraint-dynamic="2.14.3" callerrev="2.10.0-RC9"/>
-				<caller organisation="com.fasterxml.jackson.datatype" name="jackson-datatype-jsr310" conf="compile, runtime" rev="2.14.3" rev-constraint-default="2.14.3" rev-constraint-dynamic="2.14.3" callerrev="2.14.3"/>
-				<caller organisation="com.fasterxml.jackson.datatype" name="jackson-datatype-jdk8" conf="compile, runtime" rev="2.14.3" rev-constraint-default="2.14.3" rev-constraint-dynamic="2.14.3" callerrev="2.14.3"/>
-				<caller organisation="com.fasterxml.jackson.core" name="jackson-databind" conf="compile, runtime" rev="2.14.3" rev-constraint-default="2.14.3" rev-constraint-dynamic="2.14.3" callerrev="2.14.3"/>
+				<metadata-artifact status="no" details="" size="46075" time="0" location="/home/alkhanafseh/.ivy2/cache/org.apache.flink/flink-scala_2.11/ivy-1.14.3.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/apache/flink/flink-scala_2.11/1.14.3/flink-scala_2.11-1.14.3.pom"/>
+				<caller organisation="org.apache.flink" name="flink-streaming-java_2.11" conf="compile, runtime" rev="1.14.3" rev-constraint-default="1.14.3" rev-constraint-dynamic="1.14.3" callerrev="1.14.3"/>
 				<artifacts>
-					<artifact name="jackson-core" type="bundle" ext="jar" status="no" details="" size="473081" time="0" location="/home/alkhanafseh/.ivy2/cache/com.fasterxml.jackson.core/jackson-core/bundles/jackson-core-2.14.3.jar">
-						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/fasterxml/jackson/core/jackson-core/2.14.3/jackson-core-2.14.3.jar"/>
+					<artifact name="flink-scala_2.11" type="jar" ext="jar" status="no" details="" size="885411" time="0" location="/home/alkhanafseh/.ivy2/cache/org.apache.flink/flink-scala_2.11/jars/flink-scala_2.11-1.14.3.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/apache/flink/flink-scala_2.11/1.14.3/flink-scala_2.11-1.14.3.jar"/>
 					</artifact>
 				</artifacts>
 			</revision>
 		</module>
-		<module organisation="com.typesafe.play" name="play-functional_2.12">
-			<revision name="2.10.0-RC9" status="release" pubdate="20230605014304" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://github.com/playframework/play-json" extra-info.apiURL="https://www.playframework.com/documentation/latest/api/scala/" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="44">
-				<license name="Apache-2.0" url="https://www.apache.org/licenses/LICENSE-2.0.html"/>
-				<metadata-artifact status="no" details="" size="2885" time="0" location="/home/alkhanafseh/.ivy2/cache/com.typesafe.play/play-functional_2.12/ivy-2.10.0-RC9.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/typesafe/play/play-functional_2.12/2.10.0-RC9/play-functional_2.12-2.10.0-RC9.pom"/>
-				<caller organisation="com.typesafe.play" name="play-json_2.12" conf="default, compile, runtime, master" rev="2.10.0-RC9" rev-constraint-default="2.10.0-RC9" rev-constraint-dynamic="2.10.0-RC9" callerrev="2.10.0-RC9"/>
+		<module organisation="com.twitter" name="chill_2.11">
+			<revision name="0.7.6" status="release" pubdate="20170114035811" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://github.com/twitter/chill" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="41">
+				<license name="Apache 2" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
+				<metadata-artifact status="no" details="" size="3172" time="0" location="/home/alkhanafseh/.ivy2/cache/com.twitter/chill_2.11/ivy-0.7.6.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/twitter/chill_2.11/0.7.6/chill_2.11-0.7.6.pom"/>
+				<caller organisation="org.apache.flink" name="flink-scala_2.11" conf="compile, runtime" rev="0.7.6" rev-constraint-default="0.7.6" rev-constraint-dynamic="0.7.6" callerrev="1.14.3"/>
 				<artifacts>
-					<artifact name="play-functional_2.12" type="jar" ext="jar" status="no" details="" size="184581" time="0" location="/home/alkhanafseh/.ivy2/cache/com.typesafe.play/play-functional_2.12/jars/play-functional_2.12-2.10.0-RC9.jar">
-						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/typesafe/play/play-functional_2.12/2.10.0-RC9/play-functional_2.12-2.10.0-RC9.jar"/>
+					<artifact name="chill_2.11" type="jar" ext="jar" status="no" details="" size="226933" time="0" location="/home/alkhanafseh/.ivy2/cache/com.twitter/chill_2.11/jars/chill_2.11-0.7.6.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/twitter/chill_2.11/0.7.6/chill_2.11-0.7.6.jar"/>
 					</artifact>
 				</artifacts>
 			</revision>
 		</module>
-		<module organisation="org.json4s" name="json4s-native_2.12">
-			<revision name="3.6.6" status="release" pubdate="20190522175603" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://github.com/json4s/json4s" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="38">
-				<license name="Apache-2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
-				<metadata-artifact status="no" details="" size="2802" time="0" location="/home/alkhanafseh/.ivy2/cache/org.json4s/json4s-native_2.12/ivy-3.6.6.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/json4s/json4s-native_2.12/3.6.6/json4s-native_2.12-3.6.6.pom"/>
-				<caller organisation="org.example" name="flink-project" conf="test, compile, runtime" rev="3.6.6" rev-constraint-default="3.6.6" rev-constraint-dynamic="3.6.6" callerrev="0.1-SNAPSHOT"/>
+		<module organisation="com.twitter" name="chill-java">
+			<revision name="0.7.6" status="release" pubdate="20170114035933" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://github.com/twitter/chill" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="42">
+				<license name="Apache 2" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
+				<metadata-artifact status="no" details="" size="2890" time="0" location="/home/alkhanafseh/.ivy2/cache/com.twitter/chill-java/ivy-0.7.6.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/twitter/chill-java/0.7.6/chill-java-0.7.6.pom"/>
+				<caller organisation="com.twitter" name="chill_2.11" conf="compile, runtime" rev="0.7.6" rev-constraint-default="0.7.6" rev-constraint-dynamic="0.7.6" callerrev="0.7.6"/>
 				<artifacts>
-					<artifact name="json4s-native_2.12" type="jar" ext="jar" status="no" details="" size="93279" time="0" location="/home/alkhanafseh/.ivy2/cache/org.json4s/json4s-native_2.12/jars/json4s-native_2.12-3.6.6.jar">
-						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/json4s/json4s-native_2.12/3.6.6/json4s-native_2.12-3.6.6.jar"/>
-					</artifact>
-				</artifacts>
-			</revision>
-		</module>
-		<module organisation="org.json4s" name="json4s-core_2.12">
-			<revision name="3.6.6" status="release" pubdate="20190522180121" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://github.com/json4s/json4s" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="39">
-				<license name="Apache-2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
-				<metadata-artifact status="no" details="" size="3094" time="0" location="/home/alkhanafseh/.ivy2/cache/org.json4s/json4s-core_2.12/ivy-3.6.6.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/json4s/json4s-core_2.12/3.6.6/json4s-core_2.12-3.6.6.pom"/>
-				<caller organisation="org.json4s" name="json4s-native_2.12" conf="default, compile, runtime, master" rev="3.6.6" rev-constraint-default="3.6.6" rev-constraint-dynamic="3.6.6" callerrev="3.6.6"/>
-				<artifacts>
-					<artifact name="json4s-core_2.12" type="jar" ext="jar" status="no" details="" size="482486" time="0" location="/home/alkhanafseh/.ivy2/cache/org.json4s/json4s-core_2.12/jars/json4s-core_2.12-3.6.6.jar">
-						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/json4s/json4s-core_2.12/3.6.6/json4s-core_2.12-3.6.6.jar"/>
-					</artifact>
-				</artifacts>
-			</revision>
-		</module>
-		<module organisation="com.thoughtworks.paranamer" name="paranamer">
-			<revision name="2.8" status="release" pubdate="20150826142928" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="42">
-				<license name="BSD" url="LICENSE.txt"/>
-				<metadata-artifact status="no" details="" size="4254" time="0" location="/home/alkhanafseh/.ivy2/cache/com.thoughtworks.paranamer/paranamer/ivy-2.8.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/thoughtworks/paranamer/paranamer/2.8/paranamer-2.8.pom"/>
-				<caller organisation="org.json4s" name="json4s-core_2.12" conf="compile, runtime" rev="2.8" rev-constraint-default="2.8" rev-constraint-dynamic="2.8" callerrev="3.6.6"/>
-				<artifacts>
-					<artifact name="paranamer" type="bundle" ext="jar" status="no" details="" size="34654" time="0" location="/home/alkhanafseh/.ivy2/cache/com.thoughtworks.paranamer/paranamer/bundles/paranamer-2.8.jar">
-						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/thoughtworks/paranamer/paranamer/2.8/paranamer-2.8.jar"/>
-					</artifact>
-				</artifacts>
-			</revision>
-		</module>
-		<module organisation="org.json4s" name="json4s-scalap_2.12">
-			<revision name="3.6.6" status="release" pubdate="20190522181259" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://github.com/json4s/json4s" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="41">
-				<license name="Apache-2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
-				<metadata-artifact status="no" details="" size="2657" time="0" location="/home/alkhanafseh/.ivy2/cache/org.json4s/json4s-scalap_2.12/ivy-3.6.6.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/json4s/json4s-scalap_2.12/3.6.6/json4s-scalap_2.12-3.6.6.pom"/>
-				<caller organisation="org.json4s" name="json4s-core_2.12" conf="compile, runtime" rev="3.6.6" rev-constraint-default="3.6.6" rev-constraint-dynamic="3.6.6" callerrev="3.6.6"/>
-				<artifacts>
-					<artifact name="json4s-scalap_2.12" type="jar" ext="jar" status="no" details="" size="349025" time="0" location="/home/alkhanafseh/.ivy2/cache/org.json4s/json4s-scalap_2.12/jars/json4s-scalap_2.12-3.6.6.jar">
-						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/json4s/json4s-scalap_2.12/3.6.6/json4s-scalap_2.12-3.6.6.jar"/>
-					</artifact>
-				</artifacts>
-			</revision>
-		</module>
-		<module organisation="org.json4s" name="json4s-ast_2.12">
-			<revision name="3.6.6" status="release" pubdate="20190522175031" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://github.com/json4s/json4s" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="40">
-				<license name="Apache-2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
-				<metadata-artifact status="no" details="" size="2648" time="0" location="/home/alkhanafseh/.ivy2/cache/org.json4s/json4s-ast_2.12/ivy-3.6.6.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/json4s/json4s-ast_2.12/3.6.6/json4s-ast_2.12-3.6.6.pom"/>
-				<caller organisation="org.json4s" name="json4s-core_2.12" conf="compile, runtime" rev="3.6.6" rev-constraint-default="3.6.6" rev-constraint-dynamic="3.6.6" callerrev="3.6.6"/>
-				<artifacts>
-					<artifact name="json4s-ast_2.12" type="jar" ext="jar" status="no" details="" size="83632" time="0" location="/home/alkhanafseh/.ivy2/cache/org.json4s/json4s-ast_2.12/jars/json4s-ast_2.12-3.6.6.jar">
-						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/json4s/json4s-ast_2.12/3.6.6/json4s-ast_2.12-3.6.6.jar"/>
-					</artifact>
-				</artifacts>
-			</revision>
-		</module>
-		<module organisation="org.apache.flink" name="flink-json">
-			<revision name="1.16.0" status="release" pubdate="20221020054851" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="37">
-				<license name="The Apache Software License, Version 2.0" url="https://www.apache.org/licenses/LICENSE-2.0.txt"/>
-				<metadata-artifact status="no" details="" size="61669" time="0" location="/home/alkhanafseh/.ivy2/cache/org.apache.flink/flink-json/ivy-1.16.0.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/apache/flink/flink-json/1.16.0/flink-json-1.16.0.pom"/>
-				<caller organisation="org.example" name="flink-project" conf="test, compile, runtime" rev="1.16.0" rev-constraint-default="1.16.0" rev-constraint-dynamic="1.16.0" callerrev="0.1-SNAPSHOT"/>
-				<artifacts>
-					<artifact name="flink-json" type="jar" ext="jar" status="no" details="" size="180250" time="0" location="/home/alkhanafseh/.ivy2/cache/org.apache.flink/flink-json/jars/flink-json-1.16.0.jar">
-						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/apache/flink/flink-json/1.16.0/flink-json-1.16.0.jar"/>
-					</artifact>
-				</artifacts>
-			</revision>
-		</module>
-		<module organisation="org.apache.flink" name="flink-clients">
-			<revision name="1.16.0" status="release" pubdate="20221020053610" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="6">
-				<license name="The Apache Software License, Version 2.0" url="https://www.apache.org/licenses/LICENSE-2.0.txt"/>
-				<metadata-artifact status="no" details="" size="54774" time="0" location="/home/alkhanafseh/.ivy2/cache/org.apache.flink/flink-clients/ivy-1.16.0.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/apache/flink/flink-clients/1.16.0/flink-clients-1.16.0.pom"/>
-				<caller organisation="org.example" name="flink-project" conf="test, compile, runtime" rev="1.16.0" rev-constraint-default="1.16.0" rev-constraint-dynamic="1.16.0" callerrev="0.1-SNAPSHOT"/>
-				<artifacts>
-					<artifact name="flink-clients" type="jar" ext="jar" status="no" details="" size="216797" time="0" location="/home/alkhanafseh/.ivy2/cache/org.apache.flink/flink-clients/jars/flink-clients-1.16.0.jar">
-						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/apache/flink/flink-clients/1.16.0/flink-clients-1.16.0.jar"/>
-					</artifact>
-				</artifacts>
-			</revision>
-		</module>
-		<module organisation="org.apache.flink" name="flink-streaming-java">
-			<revision name="1.16.0" status="release" pubdate="20221020053409" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="35">
-				<license name="The Apache Software License, Version 2.0" url="https://www.apache.org/licenses/LICENSE-2.0.txt"/>
-				<metadata-artifact status="no" details="" size="54777" time="0" location="/home/alkhanafseh/.ivy2/cache/org.apache.flink/flink-streaming-java/ivy-1.16.0.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/apache/flink/flink-streaming-java/1.16.0/flink-streaming-java-1.16.0.pom"/>
-				<caller organisation="org.apache.flink" name="flink-clients" conf="default, compile, runtime, master" rev="1.16.0" rev-constraint-default="1.16.0" rev-constraint-dynamic="1.16.0" callerrev="1.16.0"/>
-				<artifacts>
-					<artifact name="flink-streaming-java" type="jar" ext="jar" status="no" details="" size="1595645" time="0" location="/home/alkhanafseh/.ivy2/cache/org.apache.flink/flink-streaming-java/jars/flink-streaming-java-1.16.0.jar">
-						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/apache/flink/flink-streaming-java/1.16.0/flink-streaming-java-1.16.0.jar"/>
+					<artifact name="chill-java" type="jar" ext="jar" status="no" details="" size="60207" time="0" location="/home/alkhanafseh/.ivy2/cache/com.twitter/chill-java/jars/chill-java-0.7.6.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/twitter/chill-java/0.7.6/chill-java-0.7.6.jar"/>
 					</artifact>
 				</artifacts>
 			</revision>
 		</module>
 		<module organisation="org.apache.flink" name="flink-file-sink-common">
-			<revision name="1.16.0" status="release" pubdate="20221020052752" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="36">
+			<revision name="1.14.3" status="release" pubdate="20220109204018" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="35">
 				<license name="The Apache Software License, Version 2.0" url="https://www.apache.org/licenses/LICENSE-2.0.txt"/>
-				<metadata-artifact status="no" details="" size="57156" time="0" location="/home/alkhanafseh/.ivy2/cache/org.apache.flink/flink-file-sink-common/ivy-1.16.0.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/apache/flink/flink-file-sink-common/1.16.0/flink-file-sink-common-1.16.0.pom"/>
-				<caller organisation="org.apache.flink" name="flink-streaming-java" conf="compile, runtime" rev="1.16.0" rev-constraint-default="1.16.0" rev-constraint-dynamic="1.16.0" callerrev="1.16.0"/>
+				<metadata-artifact status="no" details="" size="44609" time="0" location="/home/alkhanafseh/.ivy2/cache/org.apache.flink/flink-file-sink-common/ivy-1.14.3.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/apache/flink/flink-file-sink-common/1.14.3/flink-file-sink-common-1.14.3.pom"/>
+				<caller organisation="org.apache.flink" name="flink-streaming-java_2.11" conf="compile, runtime" rev="1.14.3" rev-constraint-default="1.14.3" rev-constraint-dynamic="1.14.3" callerrev="1.14.3"/>
 				<artifacts>
-					<artifact name="flink-file-sink-common" type="jar" ext="jar" status="no" details="" size="50501" time="0" location="/home/alkhanafseh/.ivy2/cache/org.apache.flink/flink-file-sink-common/jars/flink-file-sink-common-1.16.0.jar">
-						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/apache/flink/flink-file-sink-common/1.16.0/flink-file-sink-common-1.16.0.jar"/>
+					<artifact name="flink-file-sink-common" type="jar" ext="jar" status="no" details="" size="43794" time="0" location="/home/alkhanafseh/.ivy2/cache/org.apache.flink/flink-file-sink-common/jars/flink-file-sink-common-1.14.3.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/apache/flink/flink-file-sink-common/1.14.3/flink-file-sink-common-1.14.3.jar"/>
 					</artifact>
 				</artifacts>
 			</revision>
 		</module>
 		<module organisation="org.apache.flink" name="flink-optimizer">
-			<revision name="1.16.0" status="release" pubdate="20221020053543" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="34">
+			<revision name="1.14.3" status="release" pubdate="20220109204004" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="33">
 				<license name="The Apache Software License, Version 2.0" url="https://www.apache.org/licenses/LICENSE-2.0.txt"/>
-				<metadata-artifact status="no" details="" size="54439" time="0" location="/home/alkhanafseh/.ivy2/cache/org.apache.flink/flink-optimizer/ivy-1.16.0.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/apache/flink/flink-optimizer/1.16.0/flink-optimizer-1.16.0.pom"/>
-				<caller organisation="org.apache.flink" name="flink-clients" conf="default, compile, runtime, master" rev="1.16.0" rev-constraint-default="1.16.0" rev-constraint-dynamic="1.16.0" callerrev="1.16.0"/>
+				<metadata-artifact status="no" details="" size="44846" time="0" location="/home/alkhanafseh/.ivy2/cache/org.apache.flink/flink-optimizer/ivy-1.14.3.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/apache/flink/flink-optimizer/1.14.3/flink-optimizer-1.14.3.pom"/>
+				<caller organisation="org.apache.flink" name="flink-clients_2.11" conf="default, compile, runtime, master" rev="1.14.3" rev-constraint-default="1.14.3" rev-constraint-dynamic="1.14.3" callerrev="1.14.3"/>
 				<artifacts>
-					<artifact name="flink-optimizer" type="jar" ext="jar" status="no" details="" size="358002" time="0" location="/home/alkhanafseh/.ivy2/cache/org.apache.flink/flink-optimizer/jars/flink-optimizer-1.16.0.jar">
-						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/apache/flink/flink-optimizer/1.16.0/flink-optimizer-1.16.0.jar"/>
+					<artifact name="flink-optimizer" type="jar" ext="jar" status="no" details="" size="357895" time="0" location="/home/alkhanafseh/.ivy2/cache/org.apache.flink/flink-optimizer/jars/flink-optimizer-1.14.3.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/apache/flink/flink-optimizer/1.14.3/flink-optimizer-1.14.3.jar"/>
 					</artifact>
 				</artifacts>
 			</revision>
 		</module>
 		<module organisation="org.apache.flink" name="flink-runtime">
-			<revision name="1.16.0" status="release" pubdate="20221020053253" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="21">
+			<revision name="1.14.3" status="release" pubdate="20220109203909" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="20">
 				<license name="The Apache Software License, Version 2.0" url="https://www.apache.org/licenses/LICENSE-2.0.txt"/>
-				<metadata-artifact status="no" details="" size="59082" time="0" location="/home/alkhanafseh/.ivy2/cache/org.apache.flink/flink-runtime/ivy-1.16.0.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/apache/flink/flink-runtime/1.16.0/flink-runtime-1.16.0.pom"/>
-				<caller organisation="org.apache.flink" name="flink-optimizer" conf="compile, runtime" rev="1.16.0" rev-constraint-default="1.16.0" rev-constraint-dynamic="1.16.0" callerrev="1.16.0"/>
-				<caller organisation="org.apache.flink" name="flink-streaming-java" conf="compile, runtime" rev="1.16.0" rev-constraint-default="1.16.0" rev-constraint-dynamic="1.16.0" callerrev="1.16.0"/>
-				<caller organisation="org.apache.flink" name="flink-clients" conf="default, compile, runtime, master" rev="1.16.0" rev-constraint-default="1.16.0" rev-constraint-dynamic="1.16.0" callerrev="1.16.0"/>
+				<metadata-artifact status="no" details="" size="47385" time="0" location="/home/alkhanafseh/.ivy2/cache/org.apache.flink/flink-runtime/ivy-1.14.3.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/apache/flink/flink-runtime/1.14.3/flink-runtime-1.14.3.pom"/>
+				<caller organisation="org.apache.flink" name="flink-clients_2.11" conf="default, compile, runtime, master" rev="1.14.3" rev-constraint-default="1.14.3" rev-constraint-dynamic="1.14.3" callerrev="1.14.3"/>
+				<caller organisation="org.apache.flink" name="flink-streaming-java_2.11" conf="compile, runtime" rev="1.14.3" rev-constraint-default="1.14.3" rev-constraint-dynamic="1.14.3" callerrev="1.14.3"/>
+				<caller organisation="org.apache.flink" name="flink-optimizer" conf="compile, runtime" rev="1.14.3" rev-constraint-default="1.14.3" rev-constraint-dynamic="1.14.3" callerrev="1.14.3"/>
 				<artifacts>
-					<artifact name="flink-runtime" type="jar" ext="jar" status="no" details="" size="5543580" time="0" location="/home/alkhanafseh/.ivy2/cache/org.apache.flink/flink-runtime/jars/flink-runtime-1.16.0.jar">
-						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/apache/flink/flink-runtime/1.16.0/flink-runtime-1.16.0.jar"/>
+					<artifact name="flink-runtime" type="jar" ext="jar" status="no" details="" size="4826796" time="0" location="/home/alkhanafseh/.ivy2/cache/org.apache.flink/flink-runtime/jars/flink-runtime-1.14.3.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/apache/flink/flink-runtime/1.14.3/flink-runtime-1.14.3.jar"/>
 					</artifact>
 				</artifacts>
 			</revision>
@@ -251,14 +161,14 @@
 				<license name="Apache-2.0" url="https://www.apache.org/licenses/LICENSE-2.0.html"/>
 				<metadata-artifact status="no" details="" size="3915" time="0" location="/home/alkhanafseh/.ivy2/cache/org.xerial.snappy/snappy-java/ivy-1.1.8.3.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/xerial/snappy/snappy-java/1.1.8.3/snappy-java-1.1.8.3.pom"/>
 				<evicted-by rev="1.1.10.1"/>
-				<caller organisation="org.apache.flink" name="flink-runtime" conf="compile, runtime" rev="1.1.8.3" rev-constraint-default="1.1.8.3" rev-constraint-dynamic="1.1.8.3" callerrev="1.16.0"/>
+				<caller organisation="org.apache.flink" name="flink-runtime" conf="compile, runtime" rev="1.1.8.3" rev-constraint-default="1.1.8.3" rev-constraint-dynamic="1.1.8.3" callerrev="1.14.3"/>
 				<artifacts>
 				</artifacts>
 			</revision>
 			<revision name="1.1.10.1" status="release" pubdate="20230615010325" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://github.com/xerial/snappy-java" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="4">
 				<license name="Apache-2.0" url="https://www.apache.org/licenses/LICENSE-2.0.html"/>
 				<metadata-artifact status="no" details="" size="3573" time="0" location="/home/alkhanafseh/.ivy2/cache/org.xerial.snappy/snappy-java/ivy-1.1.10.1.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/xerial/snappy/snappy-java/1.1.10.1/snappy-java-1.1.10.1.pom"/>
-				<caller organisation="org.apache.flink" name="flink-runtime" conf="compile, runtime" rev="1.1.8.3" rev-constraint-default="1.1.8.3" rev-constraint-dynamic="1.1.8.3" callerrev="1.16.0"/>
+				<caller organisation="org.apache.flink" name="flink-runtime" conf="compile, runtime" rev="1.1.8.3" rev-constraint-default="1.1.8.3" rev-constraint-dynamic="1.1.8.3" callerrev="1.14.3"/>
 				<caller organisation="org.apache.kafka" name="kafka-clients" conf="default, compile, runtime, master" rev="1.1.10.1" rev-constraint-default="1.1.10.1" rev-constraint-dynamic="1.1.10.1" callerrev="3.5.1"/>
 				<artifacts>
 					<artifact name="snappy-java" type="bundle" ext="jar" status="no" details="" size="1773713" time="0" location="/home/alkhanafseh/.ivy2/cache/org.xerial.snappy/snappy-java/bundles/snappy-java-1.1.10.1.jar">
@@ -268,12 +178,12 @@
 			</revision>
 		</module>
 		<module organisation="org.javassist" name="javassist">
-			<revision name="3.24.0-GA" status="release" pubdate="20181101201800" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://www.javassist.org/" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="33">
+			<revision name="3.24.0-GA" status="release" pubdate="20181101201800" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://www.javassist.org/" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="32">
 				<license name="MPL 1.1" url="http://www.mozilla.org/MPL/MPL-1.1.html"/>
 				<license name="LGPL 2.1" url="http://www.gnu.org/licenses/lgpl-2.1.html"/>
 				<license name="Apache License 2.0" url="http://www.apache.org/licenses/"/>
 				<metadata-artifact status="no" details="" size="3415" time="0" location="/home/alkhanafseh/.ivy2/cache/org.javassist/javassist/ivy-3.24.0-GA.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/javassist/javassist/3.24.0-GA/javassist-3.24.0-GA.pom"/>
-				<caller organisation="org.apache.flink" name="flink-runtime" conf="compile, runtime" rev="3.24.0-GA" rev-constraint-default="3.24.0-GA" rev-constraint-dynamic="3.24.0-GA" callerrev="1.16.0"/>
+				<caller organisation="org.apache.flink" name="flink-runtime" conf="compile, runtime" rev="3.24.0-GA" rev-constraint-default="3.24.0-GA" rev-constraint-dynamic="3.24.0-GA" callerrev="1.14.3"/>
 				<artifacts>
 					<artifact name="javassist" type="bundle" ext="jar" status="no" details="" size="777669" time="0" location="/home/alkhanafseh/.ivy2/cache/org.javassist/javassist/bundles/javassist-3.24.0-GA.jar">
 						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/javassist/javassist/3.24.0-GA/javassist-3.24.0-GA.jar"/>
@@ -282,183 +192,187 @@
 			</revision>
 		</module>
 		<module organisation="commons-cli" name="commons-cli">
-			<revision name="1.5.0" status="release" pubdate="20211024004803" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://commons.apache.org/proper/commons-cli/" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="32">
-				<license name="Apache License, Version 2.0" url="https://www.apache.org/licenses/LICENSE-2.0.txt"/>
-				<metadata-artifact status="no" details="" size="16694" time="0" location="/home/alkhanafseh/.ivy2/cache/commons-cli/commons-cli/ivy-1.5.0.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/commons-cli/commons-cli/1.5.0/commons-cli-1.5.0.pom"/>
-				<caller organisation="org.apache.flink" name="flink-runtime" conf="compile, runtime" rev="1.5.0" rev-constraint-default="1.5.0" rev-constraint-dynamic="1.5.0" callerrev="1.16.0"/>
-				<caller organisation="org.apache.flink" name="flink-clients" conf="default, compile, runtime, master" rev="1.5.0" rev-constraint-default="1.5.0" rev-constraint-dynamic="1.5.0" callerrev="1.16.0"/>
+			<revision name="1.3.1" status="release" pubdate="20150614130623" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://commons.apache.org/proper/commons-cli/" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="31">
+				<license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
+				<metadata-artifact status="no" details="" size="10819" time="0" location="/home/alkhanafseh/.ivy2/cache/commons-cli/commons-cli/ivy-1.3.1.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/commons-cli/commons-cli/1.3.1/commons-cli-1.3.1.pom"/>
+				<caller organisation="org.apache.flink" name="flink-clients_2.11" conf="default, compile, runtime, master" rev="1.3.1" rev-constraint-default="1.3.1" rev-constraint-dynamic="1.3.1" callerrev="1.14.3"/>
+				<caller organisation="org.apache.flink" name="flink-runtime" conf="compile, runtime" rev="1.3.1" rev-constraint-default="1.3.1" rev-constraint-dynamic="1.3.1" callerrev="1.14.3"/>
 				<artifacts>
-					<artifact name="commons-cli" type="jar" ext="jar" status="no" details="" size="58284" time="0" location="/home/alkhanafseh/.ivy2/cache/commons-cli/commons-cli/jars/commons-cli-1.5.0.jar">
-						<origin-location is-local="false" location="https://repo1.maven.org/maven2/commons-cli/commons-cli/1.5.0/commons-cli-1.5.0.jar"/>
+					<artifact name="commons-cli" type="jar" ext="jar" status="no" details="" size="52988" time="0" location="/home/alkhanafseh/.ivy2/cache/commons-cli/commons-cli/jars/commons-cli-1.3.1.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/commons-cli/commons-cli/1.3.1/commons-cli-1.3.1.jar"/>
 					</artifact>
 				</artifacts>
 			</revision>
 		</module>
 		<module organisation="org.apache.flink" name="flink-shaded-zookeeper-3">
-			<revision name="3.5.9-15.0" status="release" pubdate="20220118163036" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="31">
+			<revision name="3.4.14-14.0" status="release" pubdate="20210715094942" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="30">
 				<license name="The Apache Software License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
-				<metadata-artifact status="no" details="" size="10603" time="0" location="/home/alkhanafseh/.ivy2/cache/org.apache.flink/flink-shaded-zookeeper-3/ivy-3.5.9-15.0.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/apache/flink/flink-shaded-zookeeper-3/3.5.9-15.0/flink-shaded-zookeeper-3-3.5.9-15.0.pom"/>
-				<caller organisation="org.apache.flink" name="flink-runtime" conf="compile, runtime" rev="3.5.9-15.0" rev-constraint-default="3.5.9-15.0" rev-constraint-dynamic="3.5.9-15.0" callerrev="1.16.0"/>
+				<metadata-artifact status="no" details="" size="5566" time="0" location="/home/alkhanafseh/.ivy2/cache/org.apache.flink/flink-shaded-zookeeper-3/ivy-3.4.14-14.0.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/apache/flink/flink-shaded-zookeeper-3/3.4.14-14.0/flink-shaded-zookeeper-3-3.4.14-14.0.pom"/>
+				<caller organisation="org.apache.flink" name="flink-runtime" conf="compile, runtime" rev="3.4.14-14.0" rev-constraint-default="3.4.14-14.0" rev-constraint-dynamic="3.4.14-14.0" callerrev="1.14.3"/>
 				<artifacts>
-					<artifact name="flink-shaded-zookeeper-3" type="jar" ext="jar" status="no" details="" size="10737871" time="0" location="/home/alkhanafseh/.ivy2/cache/org.apache.flink/flink-shaded-zookeeper-3/jars/flink-shaded-zookeeper-3-3.5.9-15.0.jar">
-						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/apache/flink/flink-shaded-zookeeper-3/3.5.9-15.0/flink-shaded-zookeeper-3-3.5.9-15.0.jar"/>
+					<artifact name="flink-shaded-zookeeper-3" type="jar" ext="jar" status="no" details="" size="7709731" time="0" location="/home/alkhanafseh/.ivy2/cache/org.apache.flink/flink-shaded-zookeeper-3/jars/flink-shaded-zookeeper-3-3.4.14-14.0.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/apache/flink/flink-shaded-zookeeper-3/3.4.14-14.0/flink-shaded-zookeeper-3-3.4.14-14.0.jar"/>
 					</artifact>
 				</artifacts>
 			</revision>
 		</module>
 		<module organisation="commons-io" name="commons-io">
-			<revision name="2.11.0" status="release" pubdate="20210710044300" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://commons.apache.org/proper/commons-io/" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="30">
+			<revision name="2.8.0" status="release" pubdate="20200906165455" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://commons.apache.org/proper/commons-io/" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="28">
 				<license name="Apache License, Version 2.0" url="https://www.apache.org/licenses/LICENSE-2.0.txt"/>
-				<metadata-artifact status="no" details="" size="20753" time="0" location="/home/alkhanafseh/.ivy2/cache/commons-io/commons-io/ivy-2.11.0.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/commons-io/commons-io/2.11.0/commons-io-2.11.0.pom"/>
-				<caller organisation="org.apache.flink" name="flink-runtime" conf="compile, runtime" rev="2.11.0" rev-constraint-default="2.11.0" rev-constraint-dynamic="2.11.0" callerrev="1.16.0"/>
+				<metadata-artifact status="no" details="" size="17776" time="0" location="/home/alkhanafseh/.ivy2/cache/commons-io/commons-io/ivy-2.8.0.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/commons-io/commons-io/2.8.0/commons-io-2.8.0.pom"/>
+				<caller organisation="org.apache.flink" name="flink-runtime" conf="compile, runtime" rev="2.8.0" rev-constraint-default="2.8.0" rev-constraint-dynamic="2.8.0" callerrev="1.14.3"/>
 				<artifacts>
-					<artifact name="commons-io" type="jar" ext="jar" status="no" details="" size="327135" time="0" location="/home/alkhanafseh/.ivy2/cache/commons-io/commons-io/jars/commons-io-2.11.0.jar">
-						<origin-location is-local="false" location="https://repo1.maven.org/maven2/commons-io/commons-io/2.11.0/commons-io-2.11.0.jar"/>
+					<artifact name="commons-io" type="jar" ext="jar" status="no" details="" size="285424" time="0" location="/home/alkhanafseh/.ivy2/cache/commons-io/commons-io/jars/commons-io-2.8.0.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/commons-io/commons-io/2.8.0/commons-io-2.8.0.jar"/>
 					</artifact>
 				</artifacts>
 			</revision>
 		</module>
 		<module organisation="org.apache.flink" name="flink-hadoop-fs">
-			<revision name="1.16.0" status="release" pubdate="20221020052948" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="29">
+			<revision name="1.14.3" status="release" pubdate="20220109203040" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="27">
 				<license name="The Apache Software License, Version 2.0" url="https://www.apache.org/licenses/LICENSE-2.0.txt"/>
-				<metadata-artifact status="no" details="" size="58017" time="0" location="/home/alkhanafseh/.ivy2/cache/org.apache.flink/flink-hadoop-fs/ivy-1.16.0.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/apache/flink/flink-hadoop-fs/1.16.0/flink-hadoop-fs-1.16.0.pom"/>
-				<caller organisation="org.apache.flink" name="flink-runtime" conf="compile, runtime" rev="1.16.0" rev-constraint-default="1.16.0" rev-constraint-dynamic="1.16.0" callerrev="1.16.0"/>
+				<metadata-artifact status="no" details="" size="46624" time="0" location="/home/alkhanafseh/.ivy2/cache/org.apache.flink/flink-hadoop-fs/ivy-1.14.3.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/apache/flink/flink-hadoop-fs/1.14.3/flink-hadoop-fs-1.14.3.pom"/>
+				<caller organisation="org.apache.flink" name="flink-runtime" conf="compile, runtime" rev="1.14.3" rev-constraint-default="1.14.3" rev-constraint-dynamic="1.14.3" callerrev="1.14.3"/>
 				<artifacts>
-					<artifact name="flink-hadoop-fs" type="jar" ext="jar" status="no" details="" size="40106" time="0" location="/home/alkhanafseh/.ivy2/cache/org.apache.flink/flink-hadoop-fs/jars/flink-hadoop-fs-1.16.0.jar">
-						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/apache/flink/flink-hadoop-fs/1.16.0/flink-hadoop-fs-1.16.0.jar"/>
+					<artifact name="flink-hadoop-fs" type="jar" ext="jar" status="no" details="" size="38893" time="0" location="/home/alkhanafseh/.ivy2/cache/org.apache.flink/flink-hadoop-fs/jars/flink-hadoop-fs-1.14.3.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/apache/flink/flink-hadoop-fs/1.14.3/flink-hadoop-fs-1.14.3.jar"/>
 					</artifact>
 				</artifacts>
 			</revision>
 		</module>
 		<module organisation="org.apache.flink" name="flink-queryable-state-client-java">
-			<revision name="1.16.0" status="release" pubdate="20221020052922" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="27">
+			<revision name="1.14.3" status="release" pubdate="20220109203725" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="25">
 				<license name="The Apache Software License, Version 2.0" url="https://www.apache.org/licenses/LICENSE-2.0.txt"/>
-				<metadata-artifact status="no" details="" size="57478" time="0" location="/home/alkhanafseh/.ivy2/cache/org.apache.flink/flink-queryable-state-client-java/ivy-1.16.0.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/apache/flink/flink-queryable-state-client-java/1.16.0/flink-queryable-state-client-java-1.16.0.pom"/>
-				<caller organisation="org.apache.flink" name="flink-runtime" conf="compile, runtime" rev="1.16.0" rev-constraint-default="1.16.0" rev-constraint-dynamic="1.16.0" callerrev="1.16.0"/>
+				<metadata-artifact status="no" details="" size="45968" time="0" location="/home/alkhanafseh/.ivy2/cache/org.apache.flink/flink-queryable-state-client-java/ivy-1.14.3.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/apache/flink/flink-queryable-state-client-java/1.14.3/flink-queryable-state-client-java-1.14.3.pom"/>
+				<caller organisation="org.apache.flink" name="flink-runtime" conf="compile, runtime" rev="1.14.3" rev-constraint-default="1.14.3" rev-constraint-dynamic="1.14.3" callerrev="1.14.3"/>
 				<artifacts>
-					<artifact name="flink-queryable-state-client-java" type="jar" ext="jar" status="no" details="" size="84370" time="0" location="/home/alkhanafseh/.ivy2/cache/org.apache.flink/flink-queryable-state-client-java/jars/flink-queryable-state-client-java-1.16.0.jar">
-						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/apache/flink/flink-queryable-state-client-java/1.16.0/flink-queryable-state-client-java-1.16.0.jar"/>
+					<artifact name="flink-queryable-state-client-java" type="jar" ext="jar" status="no" details="" size="84372" time="0" location="/home/alkhanafseh/.ivy2/cache/org.apache.flink/flink-queryable-state-client-java/jars/flink-queryable-state-client-java-1.14.3.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/apache/flink/flink-queryable-state-client-java/1.14.3/flink-queryable-state-client-java-1.14.3.jar"/>
 					</artifact>
 				</artifacts>
 			</revision>
 		</module>
 		<module organisation="org.apache.flink" name="flink-shaded-netty">
-			<revision name="4.1.70.Final-15.0" status="release" pubdate="20220118162939" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="28">
+			<revision name="4.1.65.Final-14.0" status="release" pubdate="20210715094906" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="26">
 				<license name="The Apache Software License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
-				<metadata-artifact status="no" details="" size="4391" time="0" location="/home/alkhanafseh/.ivy2/cache/org.apache.flink/flink-shaded-netty/ivy-4.1.70.Final-15.0.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/apache/flink/flink-shaded-netty/4.1.70.Final-15.0/flink-shaded-netty-4.1.70.Final-15.0.pom"/>
-				<caller organisation="org.apache.flink" name="flink-queryable-state-client-java" conf="compile, runtime" rev="4.1.70.Final-15.0" rev-constraint-default="4.1.70.Final-15.0" rev-constraint-dynamic="4.1.70.Final-15.0" callerrev="1.16.0"/>
-				<caller organisation="org.apache.flink" name="flink-runtime" conf="compile, runtime" rev="4.1.70.Final-15.0" rev-constraint-default="4.1.70.Final-15.0" rev-constraint-dynamic="4.1.70.Final-15.0" callerrev="1.16.0"/>
+				<metadata-artifact status="no" details="" size="4391" time="0" location="/home/alkhanafseh/.ivy2/cache/org.apache.flink/flink-shaded-netty/ivy-4.1.65.Final-14.0.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/apache/flink/flink-shaded-netty/4.1.65.Final-14.0/flink-shaded-netty-4.1.65.Final-14.0.pom"/>
+				<caller organisation="org.apache.flink" name="flink-runtime" conf="compile, runtime" rev="4.1.65.Final-14.0" rev-constraint-default="4.1.65.Final-14.0" rev-constraint-dynamic="4.1.65.Final-14.0" callerrev="1.14.3"/>
+				<caller organisation="org.apache.flink" name="flink-queryable-state-client-java" conf="compile, runtime" rev="4.1.65.Final-14.0" rev-constraint-default="4.1.65.Final-14.0" rev-constraint-dynamic="4.1.65.Final-14.0" callerrev="1.14.3"/>
 				<artifacts>
-					<artifact name="flink-shaded-netty" type="jar" ext="jar" status="no" details="" size="4759836" time="0" location="/home/alkhanafseh/.ivy2/cache/org.apache.flink/flink-shaded-netty/jars/flink-shaded-netty-4.1.70.Final-15.0.jar">
-						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/apache/flink/flink-shaded-netty/4.1.70.Final-15.0/flink-shaded-netty-4.1.70.Final-15.0.jar"/>
+					<artifact name="flink-shaded-netty" type="jar" ext="jar" status="no" details="" size="4647646" time="0" location="/home/alkhanafseh/.ivy2/cache/org.apache.flink/flink-shaded-netty/jars/flink-shaded-netty-4.1.65.Final-14.0.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/apache/flink/flink-shaded-netty/4.1.65.Final-14.0/flink-shaded-netty-4.1.65.Final-14.0.jar"/>
 					</artifact>
 				</artifacts>
 			</revision>
 		</module>
 		<module organisation="org.apache.flink" name="flink-java">
-			<revision name="1.16.0" status="release" pubdate="20221020052738" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="24">
+			<revision name="1.14.3" status="release" pubdate="20220109202917" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="23">
 				<license name="The Apache Software License, Version 2.0" url="https://www.apache.org/licenses/LICENSE-2.0.txt"/>
-				<metadata-artifact status="no" details="" size="53991" time="0" location="/home/alkhanafseh/.ivy2/cache/org.apache.flink/flink-java/ivy-1.16.0.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/apache/flink/flink-java/1.16.0/flink-java-1.16.0.pom"/>
-				<caller organisation="org.apache.flink" name="flink-optimizer" conf="compile, runtime" rev="1.16.0" rev-constraint-default="1.16.0" rev-constraint-dynamic="1.16.0" callerrev="1.16.0"/>
-				<caller organisation="org.apache.flink" name="flink-streaming-java" conf="compile, runtime" rev="1.16.0" rev-constraint-default="1.16.0" rev-constraint-dynamic="1.16.0" callerrev="1.16.0"/>
-				<caller organisation="org.apache.flink" name="flink-runtime" conf="compile, runtime" rev="1.16.0" rev-constraint-default="1.16.0" rev-constraint-dynamic="1.16.0" callerrev="1.16.0"/>
-				<caller organisation="org.apache.flink" name="flink-clients" conf="default, compile, runtime, master" rev="1.16.0" rev-constraint-default="1.16.0" rev-constraint-dynamic="1.16.0" callerrev="1.16.0"/>
+				<metadata-artifact status="no" details="" size="42620" time="0" location="/home/alkhanafseh/.ivy2/cache/org.apache.flink/flink-java/ivy-1.14.3.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/apache/flink/flink-java/1.14.3/flink-java-1.14.3.pom"/>
+				<caller organisation="org.apache.flink" name="flink-scala_2.11" conf="compile, runtime" rev="1.14.3" rev-constraint-default="1.14.3" rev-constraint-dynamic="1.14.3" callerrev="1.14.3"/>
+				<caller organisation="org.apache.flink" name="flink-clients_2.11" conf="default, compile, runtime, master" rev="1.14.3" rev-constraint-default="1.14.3" rev-constraint-dynamic="1.14.3" callerrev="1.14.3"/>
+				<caller organisation="org.apache.flink" name="flink-runtime" conf="compile, runtime" rev="1.14.3" rev-constraint-default="1.14.3" rev-constraint-dynamic="1.14.3" callerrev="1.14.3"/>
+				<caller organisation="org.apache.flink" name="flink-streaming-java_2.11" conf="compile, runtime" rev="1.14.3" rev-constraint-default="1.14.3" rev-constraint-dynamic="1.14.3" callerrev="1.14.3"/>
+				<caller organisation="org.apache.flink" name="flink-optimizer" conf="compile, runtime" rev="1.14.3" rev-constraint-default="1.14.3" rev-constraint-dynamic="1.14.3" callerrev="1.14.3"/>
 				<artifacts>
-					<artifact name="flink-java" type="jar" ext="jar" status="no" details="" size="445226" time="0" location="/home/alkhanafseh/.ivy2/cache/org.apache.flink/flink-java/jars/flink-java-1.16.0.jar">
-						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/apache/flink/flink-java/1.16.0/flink-java-1.16.0.jar"/>
-					</artifact>
-				</artifacts>
-			</revision>
-		</module>
-		<module organisation="com.twitter" name="chill-java">
-			<revision name="0.7.6" status="release" pubdate="20170114035933" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://github.com/twitter/chill" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="26">
-				<license name="Apache 2" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
-				<metadata-artifact status="no" details="" size="2890" time="0" location="/home/alkhanafseh/.ivy2/cache/com.twitter/chill-java/ivy-0.7.6.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/twitter/chill-java/0.7.6/chill-java-0.7.6.pom"/>
-				<caller organisation="org.apache.flink" name="flink-java" conf="compile, runtime" rev="0.7.6" rev-constraint-default="0.7.6" rev-constraint-dynamic="0.7.6" callerrev="1.16.0"/>
-				<artifacts>
-					<artifact name="chill-java" type="jar" ext="jar" status="no" details="" size="60207" time="0" location="/home/alkhanafseh/.ivy2/cache/com.twitter/chill-java/jars/chill-java-0.7.6.jar">
-						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/twitter/chill-java/0.7.6/chill-java-0.7.6.jar"/>
+					<artifact name="flink-java" type="jar" ext="jar" status="no" details="" size="440547" time="0" location="/home/alkhanafseh/.ivy2/cache/org.apache.flink/flink-java/jars/flink-java-1.14.3.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/apache/flink/flink-java/1.14.3/flink-java-1.14.3.jar"/>
 					</artifact>
 				</artifacts>
 			</revision>
 		</module>
 		<module organisation="org.apache.commons" name="commons-math3">
-			<revision name="3.6.1" status="release" pubdate="20160317193511" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://commons.apache.org/proper/commons-math/" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="25">
-				<license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
-				<metadata-artifact status="no" details="" size="11910" time="0" location="/home/alkhanafseh/.ivy2/cache/org.apache.commons/commons-math3/ivy-3.6.1.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/apache/commons/commons-math3/3.6.1/commons-math3-3.6.1.pom"/>
-				<caller organisation="org.apache.flink" name="flink-java" conf="compile, runtime" rev="3.6.1" rev-constraint-default="3.6.1" rev-constraint-dynamic="3.6.1" callerrev="1.16.0"/>
-				<caller organisation="org.apache.flink" name="flink-streaming-java" conf="compile, runtime" rev="3.6.1" rev-constraint-default="3.6.1" rev-constraint-dynamic="3.6.1" callerrev="1.16.0"/>
+			<revision name="3.5" status="release" pubdate="20150414153919" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://commons.apache.org/proper/commons-math/" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="24">
+				<license name="The Apache Software License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
+				<metadata-artifact status="no" details="" size="11195" time="0" location="/home/alkhanafseh/.ivy2/cache/org.apache.commons/commons-math3/ivy-3.5.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/apache/commons/commons-math3/3.5/commons-math3-3.5.pom"/>
+				<caller organisation="org.apache.flink" name="flink-java" conf="compile, runtime" rev="3.5" rev-constraint-default="3.5" rev-constraint-dynamic="3.5" callerrev="1.14.3"/>
+				<caller organisation="org.apache.flink" name="flink-streaming-java_2.11" conf="compile, runtime" rev="3.5" rev-constraint-default="3.5" rev-constraint-dynamic="3.5" callerrev="1.14.3"/>
 				<artifacts>
-					<artifact name="commons-math3" type="jar" ext="jar" status="no" details="" size="2213560" time="0" location="/home/alkhanafseh/.ivy2/cache/org.apache.commons/commons-math3/jars/commons-math3-3.6.1.jar">
-						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/apache/commons/commons-math3/3.6.1/commons-math3-3.6.1.jar"/>
+					<artifact name="commons-math3" type="jar" ext="jar" status="no" details="" size="2038489" time="0" location="/home/alkhanafseh/.ivy2/cache/org.apache.commons/commons-math3/jars/commons-math3-3.5.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/apache/commons/commons-math3/3.5/commons-math3-3.5.jar"/>
 					</artifact>
 				</artifacts>
 			</revision>
 		</module>
 		<module organisation="org.apache.flink" name="flink-rpc-akka-loader">
-			<revision name="1.16.0" status="release" pubdate="20221020052904" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="23">
+			<revision name="1.14.3" status="release" pubdate="20220109203714" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="22">
 				<license name="The Apache Software License, Version 2.0" url="https://www.apache.org/licenses/LICENSE-2.0.txt"/>
-				<metadata-artifact status="no" details="" size="55839" time="0" location="/home/alkhanafseh/.ivy2/cache/org.apache.flink/flink-rpc-akka-loader/ivy-1.16.0.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/apache/flink/flink-rpc-akka-loader/1.16.0/flink-rpc-akka-loader-1.16.0.pom"/>
-				<caller organisation="org.apache.flink" name="flink-runtime" conf="compile, runtime" rev="1.16.0" rev-constraint-default="1.16.0" rev-constraint-dynamic="1.16.0" callerrev="1.16.0"/>
+				<metadata-artifact status="no" details="" size="44417" time="0" location="/home/alkhanafseh/.ivy2/cache/org.apache.flink/flink-rpc-akka-loader/ivy-1.14.3.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/apache/flink/flink-rpc-akka-loader/1.14.3/flink-rpc-akka-loader-1.14.3.pom"/>
+				<caller organisation="org.apache.flink" name="flink-runtime" conf="compile, runtime" rev="1.14.3" rev-constraint-default="1.14.3" rev-constraint-dynamic="1.14.3" callerrev="1.14.3"/>
 				<artifacts>
-					<artifact name="flink-rpc-akka-loader" type="jar" ext="jar" status="no" details="" size="33881137" time="0" location="/home/alkhanafseh/.ivy2/cache/org.apache.flink/flink-rpc-akka-loader/jars/flink-rpc-akka-loader-1.16.0.jar">
-						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/apache/flink/flink-rpc-akka-loader/1.16.0/flink-rpc-akka-loader-1.16.0.jar"/>
+					<artifact name="flink-rpc-akka-loader" type="jar" ext="jar" status="no" details="" size="33887044" time="0" location="/home/alkhanafseh/.ivy2/cache/org.apache.flink/flink-rpc-akka-loader/jars/flink-rpc-akka-loader-1.14.3.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/apache/flink/flink-rpc-akka-loader/1.14.3/flink-rpc-akka-loader-1.14.3.jar"/>
 					</artifact>
 				</artifacts>
 			</revision>
 		</module>
 		<module organisation="org.apache.flink" name="flink-rpc-core">
-			<revision name="1.16.0" status="release" pubdate="20221020052807" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="22">
+			<revision name="1.14.3" status="release" pubdate="20220109203501" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="21">
 				<license name="The Apache Software License, Version 2.0" url="https://www.apache.org/licenses/LICENSE-2.0.txt"/>
-				<metadata-artifact status="no" details="" size="56588" time="0" location="/home/alkhanafseh/.ivy2/cache/org.apache.flink/flink-rpc-core/ivy-1.16.0.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/apache/flink/flink-rpc-core/1.16.0/flink-rpc-core-1.16.0.pom"/>
-				<caller organisation="org.apache.flink" name="flink-runtime" conf="compile, runtime" rev="1.16.0" rev-constraint-default="1.16.0" rev-constraint-dynamic="1.16.0" callerrev="1.16.0"/>
-				<caller organisation="org.apache.flink" name="flink-rpc-akka-loader" conf="compile, runtime" rev="1.16.0" rev-constraint-default="1.16.0" rev-constraint-dynamic="1.16.0" callerrev="1.16.0"/>
+				<metadata-artifact status="no" details="" size="45078" time="0" location="/home/alkhanafseh/.ivy2/cache/org.apache.flink/flink-rpc-core/ivy-1.14.3.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/apache/flink/flink-rpc-core/1.14.3/flink-rpc-core-1.14.3.pom"/>
+				<caller organisation="org.apache.flink" name="flink-rpc-akka-loader" conf="compile, runtime" rev="1.14.3" rev-constraint-default="1.14.3" rev-constraint-dynamic="1.14.3" callerrev="1.14.3"/>
+				<caller organisation="org.apache.flink" name="flink-runtime" conf="compile, runtime" rev="1.14.3" rev-constraint-default="1.14.3" rev-constraint-dynamic="1.14.3" callerrev="1.14.3"/>
 				<artifacts>
-					<artifact name="flink-rpc-core" type="jar" ext="jar" status="no" details="" size="49577" time="0" location="/home/alkhanafseh/.ivy2/cache/org.apache.flink/flink-rpc-core/jars/flink-rpc-core-1.16.0.jar">
-						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/apache/flink/flink-rpc-core/1.16.0/flink-rpc-core-1.16.0.jar"/>
+					<artifact name="flink-rpc-core" type="jar" ext="jar" status="no" details="" size="51486" time="0" location="/home/alkhanafseh/.ivy2/cache/org.apache.flink/flink-rpc-core/jars/flink-rpc-core-1.14.3.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/apache/flink/flink-rpc-core/1.14.3/flink-rpc-core-1.14.3.jar"/>
 					</artifact>
 				</artifacts>
 			</revision>
 		</module>
 		<module organisation="org.apache.flink" name="flink-core">
-			<revision name="1.16.0" status="release" pubdate="20221020052559" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="7">
+			<revision name="1.14.3" status="release" pubdate="20220109202808" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="7">
 				<license name="The Apache Software License, Version 2.0" url="https://www.apache.org/licenses/LICENSE-2.0.txt"/>
-				<metadata-artifact status="no" details="" size="55305" time="0" location="/home/alkhanafseh/.ivy2/cache/org.apache.flink/flink-core/ivy-1.16.0.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/apache/flink/flink-core/1.16.0/flink-core-1.16.0.pom"/>
-				<caller organisation="org.apache.flink" name="flink-java" conf="compile, runtime" rev="1.16.0" rev-constraint-default="1.16.0" rev-constraint-dynamic="1.16.0" callerrev="1.16.0"/>
-				<caller organisation="org.apache.flink" name="flink-hadoop-fs" conf="compile, runtime" rev="1.16.0" rev-constraint-default="1.16.0" rev-constraint-dynamic="1.16.0" callerrev="1.16.0"/>
-				<caller organisation="org.apache.flink" name="flink-optimizer" conf="compile, runtime" rev="1.16.0" rev-constraint-default="1.16.0" rev-constraint-dynamic="1.16.0" callerrev="1.16.0"/>
-				<caller organisation="org.apache.flink" name="flink-streaming-java" conf="compile, runtime" rev="1.16.0" rev-constraint-default="1.16.0" rev-constraint-dynamic="1.16.0" callerrev="1.16.0"/>
-				<caller organisation="org.apache.flink" name="flink-runtime" conf="compile, runtime" rev="1.16.0" rev-constraint-default="1.16.0" rev-constraint-dynamic="1.16.0" callerrev="1.16.0"/>
-				<caller organisation="org.apache.flink" name="flink-clients" conf="default, compile, runtime, master" rev="1.16.0" rev-constraint-default="1.16.0" rev-constraint-dynamic="1.16.0" callerrev="1.16.0"/>
-				<caller organisation="org.apache.flink" name="flink-rpc-akka-loader" conf="compile, runtime" rev="1.16.0" rev-constraint-default="1.16.0" rev-constraint-dynamic="1.16.0" callerrev="1.16.0"/>
+				<metadata-artifact status="no" details="" size="44053" time="0" location="/home/alkhanafseh/.ivy2/cache/org.apache.flink/flink-core/ivy-1.14.3.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/apache/flink/flink-core/1.14.3/flink-core-1.14.3.pom"/>
+				<caller organisation="org.apache.flink" name="flink-java" conf="compile, runtime" rev="1.14.3" rev-constraint-default="1.14.3" rev-constraint-dynamic="1.14.3" callerrev="1.14.3"/>
+				<caller organisation="org.apache.flink" name="flink-scala_2.11" conf="compile, runtime" rev="1.14.3" rev-constraint-default="1.14.3" rev-constraint-dynamic="1.14.3" callerrev="1.14.3"/>
+				<caller organisation="org.apache.flink" name="flink-rpc-akka-loader" conf="compile, runtime" rev="1.14.3" rev-constraint-default="1.14.3" rev-constraint-dynamic="1.14.3" callerrev="1.14.3"/>
+				<caller organisation="org.apache.flink" name="flink-clients_2.11" conf="default, compile, runtime, master" rev="1.14.3" rev-constraint-default="1.14.3" rev-constraint-dynamic="1.14.3" callerrev="1.14.3"/>
+				<caller organisation="org.apache.flink" name="flink-file-sink-common" conf="compile, runtime" rev="1.14.3" rev-constraint-default="1.14.3" rev-constraint-dynamic="1.14.3" callerrev="1.14.3"/>
+				<caller organisation="org.apache.flink" name="flink-hadoop-fs" conf="compile, runtime" rev="1.14.3" rev-constraint-default="1.14.3" rev-constraint-dynamic="1.14.3" callerrev="1.14.3"/>
+				<caller organisation="org.apache.flink" name="flink-runtime" conf="compile, runtime" rev="1.14.3" rev-constraint-default="1.14.3" rev-constraint-dynamic="1.14.3" callerrev="1.14.3"/>
+				<caller organisation="org.apache.flink" name="flink-streaming-java_2.11" conf="compile, runtime" rev="1.14.3" rev-constraint-default="1.14.3" rev-constraint-dynamic="1.14.3" callerrev="1.14.3"/>
+				<caller organisation="org.apache.flink" name="flink-optimizer" conf="compile, runtime" rev="1.14.3" rev-constraint-default="1.14.3" rev-constraint-dynamic="1.14.3" callerrev="1.14.3"/>
 				<artifacts>
-					<artifact name="flink-core" type="jar" ext="jar" status="no" details="" size="1842571" time="0" location="/home/alkhanafseh/.ivy2/cache/org.apache.flink/flink-core/jars/flink-core-1.16.0.jar">
-						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/apache/flink/flink-core/1.16.0/flink-core-1.16.0.jar"/>
+					<artifact name="flink-core" type="jar" ext="jar" status="no" details="" size="1762496" time="0" location="/home/alkhanafseh/.ivy2/cache/org.apache.flink/flink-core/jars/flink-core-1.14.3.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/apache/flink/flink-core/1.14.3/flink-core-1.14.3.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.apache.flink" name="flink-shaded-jackson">
+			<revision name="2.12.4-14.0" status="release" pubdate="20210715094927" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="29">
+				<license name="The Apache Software License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
+				<metadata-artifact status="no" details="" size="5720" time="0" location="/home/alkhanafseh/.ivy2/cache/org.apache.flink/flink-shaded-jackson/ivy-2.12.4-14.0.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/apache/flink/flink-shaded-jackson/2.12.4-14.0/flink-shaded-jackson-2.12.4-14.0.pom"/>
+				<caller organisation="org.apache.flink" name="flink-runtime" conf="compile, runtime" rev="2.12.4-14.0" rev-constraint-default="2.12.4-14.0" rev-constraint-dynamic="2.12.4-14.0" callerrev="1.14.3"/>
+				<caller organisation="org.apache.flink" name="flink-optimizer" conf="compile, runtime" rev="2.12.4-14.0" rev-constraint-default="2.12.4-14.0" rev-constraint-dynamic="2.12.4-14.0" callerrev="1.14.3"/>
+				<artifacts>
+					<artifact name="flink-shaded-jackson" type="jar" ext="jar" status="no" details="" size="2523624" time="0" location="/home/alkhanafseh/.ivy2/cache/org.apache.flink/flink-shaded-jackson/jars/flink-shaded-jackson-2.12.4-14.0.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/apache/flink/flink-shaded-jackson/2.12.4-14.0/flink-shaded-jackson-2.12.4-14.0.jar"/>
 					</artifact>
 				</artifacts>
 			</revision>
 		</module>
 		<module organisation="org.apache.flink" name="flink-shaded-guava">
-			<revision name="30.1.1-jre-15.0" status="release" pubdate="20220118162527" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="20">
+			<revision name="30.1.1-jre-14.0" status="release" pubdate="20210715094548" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="19">
 				<license name="The Apache Software License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
-				<metadata-artifact status="no" details="" size="4430" time="0" location="/home/alkhanafseh/.ivy2/cache/org.apache.flink/flink-shaded-guava/ivy-30.1.1-jre-15.0.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/apache/flink/flink-shaded-guava/30.1.1-jre-15.0/flink-shaded-guava-30.1.1-jre-15.0.pom"/>
-				<caller organisation="org.apache.flink" name="flink-core" conf="compile, runtime" rev="30.1.1-jre-15.0" rev-constraint-default="30.1.1-jre-15.0" rev-constraint-dynamic="30.1.1-jre-15.0" callerrev="1.16.0"/>
-				<caller organisation="org.apache.flink" name="flink-queryable-state-client-java" conf="compile, runtime" rev="30.1.1-jre-15.0" rev-constraint-default="30.1.1-jre-15.0" rev-constraint-dynamic="30.1.1-jre-15.0" callerrev="1.16.0"/>
-				<caller organisation="org.apache.flink" name="flink-optimizer" conf="compile, runtime" rev="30.1.1-jre-15.0" rev-constraint-default="30.1.1-jre-15.0" rev-constraint-dynamic="30.1.1-jre-15.0" callerrev="1.16.0"/>
-				<caller organisation="org.apache.flink" name="flink-streaming-java" conf="compile, runtime" rev="30.1.1-jre-15.0" rev-constraint-default="30.1.1-jre-15.0" rev-constraint-dynamic="30.1.1-jre-15.0" callerrev="1.16.0"/>
-				<caller organisation="org.apache.flink" name="flink-runtime" conf="compile, runtime" rev="30.1.1-jre-15.0" rev-constraint-default="30.1.1-jre-15.0" rev-constraint-dynamic="30.1.1-jre-15.0" callerrev="1.16.0"/>
+				<metadata-artifact status="no" details="" size="4356" time="0" location="/home/alkhanafseh/.ivy2/cache/org.apache.flink/flink-shaded-guava/ivy-30.1.1-jre-14.0.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/apache/flink/flink-shaded-guava/30.1.1-jre-14.0/flink-shaded-guava-30.1.1-jre-14.0.pom"/>
+				<caller organisation="org.apache.flink" name="flink-core" conf="compile, runtime" rev="30.1.1-jre-14.0" rev-constraint-default="30.1.1-jre-14.0" rev-constraint-dynamic="30.1.1-jre-14.0" callerrev="1.14.3"/>
+				<caller organisation="org.apache.flink" name="flink-runtime" conf="compile, runtime" rev="30.1.1-jre-14.0" rev-constraint-default="30.1.1-jre-14.0" rev-constraint-dynamic="30.1.1-jre-14.0" callerrev="1.14.3"/>
+				<caller organisation="org.apache.flink" name="flink-streaming-java_2.11" conf="compile, runtime" rev="30.1.1-jre-14.0" rev-constraint-default="30.1.1-jre-14.0" rev-constraint-dynamic="30.1.1-jre-14.0" callerrev="1.14.3"/>
+				<caller organisation="org.apache.flink" name="flink-queryable-state-client-java" conf="compile, runtime" rev="30.1.1-jre-14.0" rev-constraint-default="30.1.1-jre-14.0" rev-constraint-dynamic="30.1.1-jre-14.0" callerrev="1.14.3"/>
+				<caller organisation="org.apache.flink" name="flink-optimizer" conf="compile, runtime" rev="30.1.1-jre-14.0" rev-constraint-default="30.1.1-jre-14.0" rev-constraint-dynamic="30.1.1-jre-14.0" callerrev="1.14.3"/>
 				<artifacts>
-					<artifact name="flink-shaded-guava" type="jar" ext="jar" status="no" details="" size="3085201" time="0" location="/home/alkhanafseh/.ivy2/cache/org.apache.flink/flink-shaded-guava/jars/flink-shaded-guava-30.1.1-jre-15.0.jar">
-						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/apache/flink/flink-shaded-guava/30.1.1-jre-15.0/flink-shaded-guava-30.1.1-jre-15.0.jar"/>
+					<artifact name="flink-shaded-guava" type="jar" ext="jar" status="no" details="" size="3085194" time="0" location="/home/alkhanafseh/.ivy2/cache/org.apache.flink/flink-shaded-guava/jars/flink-shaded-guava-30.1.1-jre-14.0.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/apache/flink/flink-shaded-guava/30.1.1-jre-14.0/flink-shaded-guava-30.1.1-jre-14.0.jar"/>
 					</artifact>
 				</artifacts>
 			</revision>
 		</module>
 		<module organisation="org.apache.commons" name="commons-compress">
-			<revision name="1.21" status="release" pubdate="20210709201150" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://commons.apache.org/proper/commons-compress/" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="19">
+			<revision name="1.21" status="release" pubdate="20210709201150" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://commons.apache.org/proper/commons-compress/" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="18">
 				<license name="Apache License, Version 2.0" url="https://www.apache.org/licenses/LICENSE-2.0.txt"/>
 				<metadata-artifact status="no" details="" size="19022" time="0" location="/home/alkhanafseh/.ivy2/cache/org.apache.commons/commons-compress/ivy-1.21.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/apache/commons/commons-compress/1.21/commons-compress-1.21.pom"/>
-				<caller organisation="org.apache.flink" name="flink-core" conf="compile, runtime" rev="1.21" rev-constraint-default="1.21" rev-constraint-dynamic="1.21" callerrev="1.16.0"/>
+				<caller organisation="org.apache.flink" name="flink-core" conf="compile, runtime" rev="1.21" rev-constraint-default="1.21" rev-constraint-dynamic="1.21" callerrev="1.14.3"/>
 				<artifacts>
 					<artifact name="commons-compress" type="jar" ext="jar" status="no" details="" size="1018316" time="0" location="/home/alkhanafseh/.ivy2/cache/org.apache.commons/commons-compress/jars/commons-compress-1.21.jar">
 						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/apache/commons/commons-compress/1.21/commons-compress-1.21.jar"/>
@@ -467,10 +381,10 @@
 			</revision>
 		</module>
 		<module organisation="commons-collections" name="commons-collections">
-			<revision name="3.2.2" status="release" pubdate="20151113011126" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://commons.apache.org/collections/" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="18">
+			<revision name="3.2.2" status="release" pubdate="20151113011126" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://commons.apache.org/collections/" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="17">
 				<license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
 				<metadata-artifact status="no" details="" size="11113" time="0" location="/home/alkhanafseh/.ivy2/cache/commons-collections/commons-collections/ivy-3.2.2.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/commons-collections/commons-collections/3.2.2/commons-collections-3.2.2.pom"/>
-				<caller organisation="org.apache.flink" name="flink-core" conf="compile, runtime" rev="3.2.2" rev-constraint-default="3.2.2" rev-constraint-dynamic="3.2.2" callerrev="1.16.0"/>
+				<caller organisation="org.apache.flink" name="flink-core" conf="compile, runtime" rev="3.2.2" rev-constraint-default="3.2.2" rev-constraint-dynamic="3.2.2" callerrev="1.14.3"/>
 				<artifacts>
 					<artifact name="commons-collections" type="jar" ext="jar" status="no" details="" size="588337" time="0" location="/home/alkhanafseh/.ivy2/cache/commons-collections/commons-collections/jars/commons-collections-3.2.2.jar">
 						<origin-location is-local="false" location="https://repo1.maven.org/maven2/commons-collections/commons-collections/3.2.2/commons-collections-3.2.2.jar"/>
@@ -479,26 +393,19 @@
 			</revision>
 		</module>
 		<module organisation="com.esotericsoftware.kryo" name="kryo">
-			<revision name="2.24.0" status="release" pubdate="20140504160438" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://github.com/EsotericSoftware/kryo" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="15">
+			<revision name="2.24.0" status="release" pubdate="20140504160438" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://github.com/EsotericSoftware/kryo" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="14">
 				<license name="New BSD License" url="http://www.opensource.org/licenses/bsd-license.php"/>
 				<metadata-artifact status="no" details="" size="3502" time="0" location="/home/alkhanafseh/.ivy2/cache/com.esotericsoftware.kryo/kryo/ivy-2.24.0.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/esotericsoftware/kryo/kryo/2.24.0/kryo-2.24.0.pom"/>
-				<caller organisation="org.apache.flink" name="flink-core" conf="compile, runtime" rev="2.24.0" rev-constraint-default="2.24.0" rev-constraint-dynamic="2.24.0" callerrev="1.16.0"/>
-				<caller organisation="com.twitter" name="chill-java" conf="compile, runtime" rev="2.21" rev-constraint-default="2.21" rev-constraint-dynamic="2.21" callerrev="0.7.6"/>
+				<caller organisation="org.apache.flink" name="flink-core" conf="compile, runtime" rev="2.24.0" rev-constraint-default="2.24.0" rev-constraint-dynamic="2.24.0" callerrev="1.14.3"/>
 				<artifacts>
 					<artifact name="kryo" type="bundle" ext="jar" status="no" details="" size="339283" time="0" location="/home/alkhanafseh/.ivy2/cache/com.esotericsoftware.kryo/kryo/bundles/kryo-2.24.0.jar">
 						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/esotericsoftware/kryo/kryo/2.24.0/kryo-2.24.0.jar"/>
 					</artifact>
 				</artifacts>
 			</revision>
-			<revision name="2.21" evicted="latest-revision" evicted-reason="" downloaded="false" searched="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="-1">
-				<evicted-by rev="2.24.0"/>
-				<caller organisation="com.twitter" name="chill-java" conf="compile, runtime" rev="2.21" rev-constraint-default="2.21" rev-constraint-dynamic="2.21" callerrev="0.7.6"/>
-				<artifacts>
-				</artifacts>
-			</revision>
 		</module>
 		<module organisation="org.objenesis" name="objenesis">
-			<revision name="2.1" status="release" pubdate="20131011002537" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://objenesis.org" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="17">
+			<revision name="2.1" status="release" pubdate="20131011002537" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://objenesis.org" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="16">
 				<license name="Apache 2" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
 				<metadata-artifact status="no" details="" size="3342" time="0" location="/home/alkhanafseh/.ivy2/cache/org.objenesis/objenesis/ivy-2.1.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/objenesis/objenesis/2.1/objenesis-2.1.pom"/>
 				<caller organisation="com.esotericsoftware.kryo" name="kryo" conf="compile, runtime" rev="2.1" rev-constraint-default="2.1" rev-constraint-dynamic="2.1" callerrev="2.24.0"/>
@@ -510,7 +417,7 @@
 			</revision>
 		</module>
 		<module organisation="com.esotericsoftware.minlog" name="minlog">
-			<revision name="1.2" status="release" pubdate="20120531152649" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://code.google.com/p/minlog/" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="16">
+			<revision name="1.2" status="release" pubdate="20120531152649" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://code.google.com/p/minlog/" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="15">
 				<license name="New BSD License" url="http://www.opensource.org/licenses/bsd-license.php"/>
 				<metadata-artifact status="no" details="" size="2665" time="0" location="/home/alkhanafseh/.ivy2/cache/com.esotericsoftware.minlog/minlog/ivy-1.2.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/esotericsoftware/minlog/minlog/1.2/minlog-1.2.pom"/>
 				<caller organisation="com.esotericsoftware.kryo" name="kryo" conf="compile, runtime" rev="1.2" rev-constraint-default="1.2" rev-constraint-dynamic="1.2" callerrev="2.24.0"/>
@@ -522,12 +429,12 @@
 			</revision>
 		</module>
 		<module organisation="org.apache.commons" name="commons-lang3">
-			<revision name="3.3.2" status="release" pubdate="20140406152129" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://commons.apache.org/proper/commons-lang/" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="14">
+			<revision name="3.3.2" status="release" pubdate="20140406152129" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://commons.apache.org/proper/commons-lang/" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="13">
 				<license name="The Apache Software License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
 				<metadata-artifact status="no" details="" size="10669" time="0" location="/home/alkhanafseh/.ivy2/cache/org.apache.commons/commons-lang3/ivy-3.3.2.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/apache/commons/commons-lang3/3.3.2/commons-lang3-3.3.2.pom"/>
-				<caller organisation="org.apache.flink" name="flink-java" conf="compile, runtime" rev="3.3.2" rev-constraint-default="3.3.2" rev-constraint-dynamic="3.3.2" callerrev="1.16.0"/>
-				<caller organisation="org.apache.flink" name="flink-core" conf="compile, runtime" rev="3.3.2" rev-constraint-default="3.3.2" rev-constraint-dynamic="3.3.2" callerrev="1.16.0"/>
-				<caller organisation="org.apache.flink" name="flink-runtime" conf="compile, runtime" rev="3.3.2" rev-constraint-default="3.3.2" rev-constraint-dynamic="3.3.2" callerrev="1.16.0"/>
+				<caller organisation="org.apache.flink" name="flink-java" conf="compile, runtime" rev="3.3.2" rev-constraint-default="3.3.2" rev-constraint-dynamic="3.3.2" callerrev="1.14.3"/>
+				<caller organisation="org.apache.flink" name="flink-core" conf="compile, runtime" rev="3.3.2" rev-constraint-default="3.3.2" rev-constraint-dynamic="3.3.2" callerrev="1.14.3"/>
+				<caller organisation="org.apache.flink" name="flink-runtime" conf="compile, runtime" rev="3.3.2" rev-constraint-default="3.3.2" rev-constraint-dynamic="3.3.2" callerrev="1.14.3"/>
 				<artifacts>
 					<artifact name="commons-lang3" type="jar" ext="jar" status="no" details="" size="412739" time="0" location="/home/alkhanafseh/.ivy2/cache/org.apache.commons/commons-lang3/jars/commons-lang3-3.3.2.jar">
 						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/apache/commons/commons-lang3/3.3.2/commons-lang3-3.3.2.jar"/>
@@ -535,78 +442,64 @@
 				</artifacts>
 			</revision>
 		</module>
-		<module organisation="org.apache.flink" name="flink-shaded-jackson">
-			<revision name="2.12.4-15.0" status="release" pubdate="20220118163010" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="13">
+		<module organisation="org.apache.flink" name="flink-shaded-asm-7">
+			<revision name="7.1-14.0" status="release" pubdate="20210715094542" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="12">
 				<license name="The Apache Software License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
-				<metadata-artifact status="no" details="" size="15316" time="0" location="/home/alkhanafseh/.ivy2/cache/org.apache.flink/flink-shaded-jackson/ivy-2.12.4-15.0.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/apache/flink/flink-shaded-jackson/2.12.4-15.0/flink-shaded-jackson-2.12.4-15.0.pom"/>
-				<caller organisation="org.apache.flink" name="flink-core" conf="compile, runtime" rev="2.12.4-15.0" rev-constraint-default="2.12.4-15.0" rev-constraint-dynamic="2.12.4-15.0" callerrev="1.16.0"/>
-				<caller organisation="org.apache.flink" name="flink-optimizer" conf="compile, runtime" rev="2.12.4-15.0" rev-constraint-default="2.12.4-15.0" rev-constraint-dynamic="2.12.4-15.0" callerrev="1.16.0"/>
-				<caller organisation="org.apache.flink" name="flink-runtime" conf="compile, runtime" rev="2.12.4-15.0" rev-constraint-default="2.12.4-15.0" rev-constraint-dynamic="2.12.4-15.0" callerrev="1.16.0"/>
+				<metadata-artifact status="no" details="" size="4429" time="0" location="/home/alkhanafseh/.ivy2/cache/org.apache.flink/flink-shaded-asm-7/ivy-7.1-14.0.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/apache/flink/flink-shaded-asm-7/7.1-14.0/flink-shaded-asm-7-7.1-14.0.pom"/>
+				<caller organisation="org.apache.flink" name="flink-scala_2.11" conf="compile, runtime" rev="7.1-14.0" rev-constraint-default="7.1-14.0" rev-constraint-dynamic="7.1-14.0" callerrev="1.14.3"/>
+				<caller organisation="org.apache.flink" name="flink-core" conf="compile, runtime" rev="7.1-14.0" rev-constraint-default="7.1-14.0" rev-constraint-dynamic="7.1-14.0" callerrev="1.14.3"/>
 				<artifacts>
-					<artifact name="flink-shaded-jackson" type="jar" ext="jar" status="no" details="" size="2677251" time="0" location="/home/alkhanafseh/.ivy2/cache/org.apache.flink/flink-shaded-jackson/jars/flink-shaded-jackson-2.12.4-15.0.jar">
-						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/apache/flink/flink-shaded-jackson/2.12.4-15.0/flink-shaded-jackson-2.12.4-15.0.jar"/>
-					</artifact>
-				</artifacts>
-			</revision>
-		</module>
-		<module organisation="org.apache.flink" name="flink-shaded-asm-9">
-			<revision name="9.2-15.0" status="release" pubdate="20220118162520" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="12">
-				<license name="The Apache Software License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
-				<metadata-artifact status="no" details="" size="4503" time="0" location="/home/alkhanafseh/.ivy2/cache/org.apache.flink/flink-shaded-asm-9/ivy-9.2-15.0.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/apache/flink/flink-shaded-asm-9/9.2-15.0/flink-shaded-asm-9-9.2-15.0.pom"/>
-				<caller organisation="org.apache.flink" name="flink-core" conf="compile, runtime" rev="9.2-15.0" rev-constraint-default="9.2-15.0" rev-constraint-dynamic="9.2-15.0" callerrev="1.16.0"/>
-				<artifacts>
-					<artifact name="flink-shaded-asm-9" type="jar" ext="jar" status="no" details="" size="295246" time="0" location="/home/alkhanafseh/.ivy2/cache/org.apache.flink/flink-shaded-asm-9/jars/flink-shaded-asm-9-9.2-15.0.jar">
-						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/apache/flink/flink-shaded-asm-9/9.2-15.0/flink-shaded-asm-9-9.2-15.0.jar"/>
+					<artifact name="flink-shaded-asm-7" type="jar" ext="jar" status="no" details="" size="282333" time="0" location="/home/alkhanafseh/.ivy2/cache/org.apache.flink/flink-shaded-asm-7/jars/flink-shaded-asm-7-7.1-14.0.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/apache/flink/flink-shaded-asm-7/7.1-14.0/flink-shaded-asm-7-7.1-14.0.jar"/>
 					</artifact>
 				</artifacts>
 			</revision>
 		</module>
 		<module organisation="org.apache.flink" name="flink-metrics-core">
-			<revision name="1.16.0" status="release" pubdate="20221020052503" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="11">
+			<revision name="1.14.3" status="release" pubdate="20220109202710" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="11">
 				<license name="The Apache Software License, Version 2.0" url="https://www.apache.org/licenses/LICENSE-2.0.txt"/>
-				<metadata-artifact status="no" details="" size="56073" time="0" location="/home/alkhanafseh/.ivy2/cache/org.apache.flink/flink-metrics-core/ivy-1.16.0.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/apache/flink/flink-metrics-core/1.16.0/flink-metrics-core-1.16.0.pom"/>
-				<caller organisation="org.apache.flink" name="flink-core" conf="compile, runtime" rev="1.16.0" rev-constraint-default="1.16.0" rev-constraint-dynamic="1.16.0" callerrev="1.16.0"/>
+				<metadata-artifact status="no" details="" size="44581" time="0" location="/home/alkhanafseh/.ivy2/cache/org.apache.flink/flink-metrics-core/ivy-1.14.3.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/apache/flink/flink-metrics-core/1.14.3/flink-metrics-core-1.14.3.pom"/>
+				<caller organisation="org.apache.flink" name="flink-core" conf="compile, runtime" rev="1.14.3" rev-constraint-default="1.14.3" rev-constraint-dynamic="1.14.3" callerrev="1.14.3"/>
 				<artifacts>
-					<artifact name="flink-metrics-core" type="jar" ext="jar" status="no" details="" size="31265" time="0" location="/home/alkhanafseh/.ivy2/cache/org.apache.flink/flink-metrics-core/jars/flink-metrics-core-1.16.0.jar">
-						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/apache/flink/flink-metrics-core/1.16.0/flink-metrics-core-1.16.0.jar"/>
+					<artifact name="flink-metrics-core" type="jar" ext="jar" status="no" details="" size="25417" time="0" location="/home/alkhanafseh/.ivy2/cache/org.apache.flink/flink-metrics-core/jars/flink-metrics-core-1.14.3.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/apache/flink/flink-metrics-core/1.14.3/flink-metrics-core-1.14.3.jar"/>
 					</artifact>
 				</artifacts>
 			</revision>
 		</module>
 		<module organisation="org.apache.flink" name="flink-annotations">
-			<revision name="1.16.0" status="release" pubdate="20221020052423" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="8">
+			<revision name="1.14.3" status="release" pubdate="20220109202646" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="8">
 				<license name="The Apache Software License, Version 2.0" url="https://www.apache.org/licenses/LICENSE-2.0.txt"/>
-				<metadata-artifact status="no" details="" size="53230" time="0" location="/home/alkhanafseh/.ivy2/cache/org.apache.flink/flink-annotations/ivy-1.16.0.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/apache/flink/flink-annotations/1.16.0/flink-annotations-1.16.0.pom"/>
-				<caller organisation="org.apache.flink" name="flink-metrics-core" conf="compile, runtime" rev="1.16.0" rev-constraint-default="1.16.0" rev-constraint-dynamic="1.16.0" callerrev="1.16.0"/>
-				<caller organisation="org.apache.flink" name="flink-core" conf="compile, runtime" rev="1.16.0" rev-constraint-default="1.16.0" rev-constraint-dynamic="1.16.0" callerrev="1.16.0"/>
+				<metadata-artifact status="no" details="" size="42075" time="0" location="/home/alkhanafseh/.ivy2/cache/org.apache.flink/flink-annotations/ivy-1.14.3.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/apache/flink/flink-annotations/1.14.3/flink-annotations-1.14.3.pom"/>
+				<caller organisation="org.apache.flink" name="flink-core" conf="compile, runtime" rev="1.14.3" rev-constraint-default="1.14.3" rev-constraint-dynamic="1.14.3" callerrev="1.14.3"/>
 				<artifacts>
-					<artifact name="flink-annotations" type="jar" ext="jar" status="no" details="" size="17473" time="0" location="/home/alkhanafseh/.ivy2/cache/org.apache.flink/flink-annotations/jars/flink-annotations-1.16.0.jar">
-						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/apache/flink/flink-annotations/1.16.0/flink-annotations-1.16.0.jar"/>
+					<artifact name="flink-annotations" type="jar" ext="jar" status="no" details="" size="15052" time="0" location="/home/alkhanafseh/.ivy2/cache/org.apache.flink/flink-annotations/jars/flink-annotations-1.14.3.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/apache/flink/flink-annotations/1.14.3/flink-annotations-1.14.3.jar"/>
 					</artifact>
 				</artifacts>
 			</revision>
 		</module>
 		<module organisation="org.apache.flink" name="flink-shaded-force-shading">
-			<revision name="15.0" status="release" pubdate="20220118162510" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="10">
+			<revision name="14.0" status="release" pubdate="20210715094536" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="10">
 				<license name="The Apache Software License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
-				<metadata-artifact status="no" details="" size="4286" time="0" location="/home/alkhanafseh/.ivy2/cache/org.apache.flink/flink-shaded-force-shading/ivy-15.0.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/apache/flink/flink-shaded-force-shading/15.0/flink-shaded-force-shading-15.0.pom"/>
-				<caller organisation="org.apache.flink" name="flink-java" conf="compile, runtime" rev="15.0" rev-constraint-default="15.0" rev-constraint-dynamic="15.0" callerrev="1.16.0"/>
-				<caller organisation="org.apache.flink" name="flink-hadoop-fs" conf="compile, runtime" rev="15.0" rev-constraint-default="15.0" rev-constraint-dynamic="15.0" callerrev="1.16.0"/>
-				<caller organisation="org.apache.flink" name="flink-metrics-core" conf="compile, runtime" rev="15.0" rev-constraint-default="15.0" rev-constraint-dynamic="15.0" callerrev="1.16.0"/>
-				<caller organisation="org.apache.flink" name="flink-core" conf="compile, runtime" rev="15.0" rev-constraint-default="15.0" rev-constraint-dynamic="15.0" callerrev="1.16.0"/>
-				<caller organisation="org.apache.flink" name="flink-queryable-state-client-java" conf="compile, runtime" rev="15.0" rev-constraint-default="15.0" rev-constraint-dynamic="15.0" callerrev="1.16.0"/>
-				<caller organisation="org.apache.flink" name="flink-rpc-core" conf="compile, runtime" rev="15.0" rev-constraint-default="15.0" rev-constraint-dynamic="15.0" callerrev="1.16.0"/>
-				<caller organisation="org.apache.flink" name="flink-optimizer" conf="compile, runtime" rev="15.0" rev-constraint-default="15.0" rev-constraint-dynamic="15.0" callerrev="1.16.0"/>
-				<caller organisation="org.apache.flink" name="flink-streaming-java" conf="compile, runtime" rev="15.0" rev-constraint-default="15.0" rev-constraint-dynamic="15.0" callerrev="1.16.0"/>
-				<caller organisation="org.apache.flink" name="flink-annotations" conf="compile, runtime" rev="15.0" rev-constraint-default="15.0" rev-constraint-dynamic="15.0" callerrev="1.16.0"/>
-				<caller organisation="org.apache.flink" name="flink-rpc-akka-loader" conf="compile, runtime" rev="15.0" rev-constraint-default="15.0" rev-constraint-dynamic="15.0" callerrev="1.16.0"/>
-				<caller organisation="org.apache.flink" name="flink-json" conf="default, compile, runtime, master" rev="15.0" rev-constraint-default="15.0" rev-constraint-dynamic="15.0" callerrev="1.16.0"/>
-				<caller organisation="org.apache.flink" name="flink-file-sink-common" conf="compile, runtime" rev="15.0" rev-constraint-default="15.0" rev-constraint-dynamic="15.0" callerrev="1.16.0"/>
-				<caller organisation="org.apache.flink" name="flink-runtime" conf="compile, runtime" rev="15.0" rev-constraint-default="15.0" rev-constraint-dynamic="15.0" callerrev="1.16.0"/>
-				<caller organisation="org.apache.flink" name="flink-clients" conf="default, compile, runtime, master" rev="15.0" rev-constraint-default="15.0" rev-constraint-dynamic="15.0" callerrev="1.16.0"/>
+				<metadata-artifact status="no" details="" size="4212" time="0" location="/home/alkhanafseh/.ivy2/cache/org.apache.flink/flink-shaded-force-shading/ivy-14.0.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/apache/flink/flink-shaded-force-shading/14.0/flink-shaded-force-shading-14.0.pom"/>
+				<caller organisation="org.apache.flink" name="flink-annotations" conf="compile, runtime" rev="14.0" rev-constraint-default="14.0" rev-constraint-dynamic="14.0" callerrev="1.14.3"/>
+				<caller organisation="org.apache.flink" name="flink-file-sink-common" conf="compile, runtime" rev="14.0" rev-constraint-default="14.0" rev-constraint-dynamic="14.0" callerrev="1.14.3"/>
+				<caller organisation="org.apache.flink" name="flink-runtime" conf="compile, runtime" rev="14.0" rev-constraint-default="14.0" rev-constraint-dynamic="14.0" callerrev="1.14.3"/>
+				<caller organisation="org.apache.flink" name="flink-streaming-java_2.11" conf="compile, runtime" rev="14.0" rev-constraint-default="14.0" rev-constraint-dynamic="14.0" callerrev="1.14.3"/>
+				<caller organisation="org.apache.flink" name="flink-queryable-state-client-java" conf="compile, runtime" rev="14.0" rev-constraint-default="14.0" rev-constraint-dynamic="14.0" callerrev="1.14.3"/>
+				<caller organisation="org.apache.flink" name="flink-optimizer" conf="compile, runtime" rev="14.0" rev-constraint-default="14.0" rev-constraint-dynamic="14.0" callerrev="1.14.3"/>
+				<caller organisation="org.apache.flink" name="flink-java" conf="compile, runtime" rev="14.0" rev-constraint-default="14.0" rev-constraint-dynamic="14.0" callerrev="1.14.3"/>
+				<caller organisation="org.apache.flink" name="flink-scala_2.11" conf="compile, runtime" rev="14.0" rev-constraint-default="14.0" rev-constraint-dynamic="14.0" callerrev="1.14.3"/>
+				<caller organisation="org.apache.flink" name="flink-core" conf="compile, runtime" rev="14.0" rev-constraint-default="14.0" rev-constraint-dynamic="14.0" callerrev="1.14.3"/>
+				<caller organisation="org.apache.flink" name="flink-metrics-core" conf="compile, runtime" rev="14.0" rev-constraint-default="14.0" rev-constraint-dynamic="14.0" callerrev="1.14.3"/>
+				<caller organisation="org.apache.flink" name="flink-rpc-akka-loader" conf="compile, runtime" rev="14.0" rev-constraint-default="14.0" rev-constraint-dynamic="14.0" callerrev="1.14.3"/>
+				<caller organisation="org.apache.flink" name="flink-clients_2.11" conf="default, compile, runtime, master" rev="14.0" rev-constraint-default="14.0" rev-constraint-dynamic="14.0" callerrev="1.14.3"/>
+				<caller organisation="org.apache.flink" name="flink-rpc-core" conf="compile, runtime" rev="14.0" rev-constraint-default="14.0" rev-constraint-dynamic="14.0" callerrev="1.14.3"/>
+				<caller organisation="org.apache.flink" name="flink-hadoop-fs" conf="compile, runtime" rev="14.0" rev-constraint-default="14.0" rev-constraint-dynamic="14.0" callerrev="1.14.3"/>
 				<artifacts>
-					<artifact name="flink-shaded-force-shading" type="jar" ext="jar" status="no" details="" size="6776" time="0" location="/home/alkhanafseh/.ivy2/cache/org.apache.flink/flink-shaded-force-shading/jars/flink-shaded-force-shading-15.0.jar">
-						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/apache/flink/flink-shaded-force-shading/15.0/flink-shaded-force-shading-15.0.jar"/>
+					<artifact name="flink-shaded-force-shading" type="jar" ext="jar" status="no" details="" size="6772" time="0" location="/home/alkhanafseh/.ivy2/cache/org.apache.flink/flink-shaded-force-shading/jars/flink-shaded-force-shading-14.0.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/apache/flink/flink-shaded-force-shading/14.0/flink-shaded-force-shading-14.0.jar"/>
 					</artifact>
 				</artifacts>
 			</revision>
@@ -615,20 +508,20 @@
 			<revision name="1.3.9" status="release" pubdate="20090825012822" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://findbugs.sourceforge.net/" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="9">
 				<license name="The Apache Software License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
 				<metadata-artifact status="no" details="" size="2519" time="0" location="/home/alkhanafseh/.ivy2/cache/com.google.code.findbugs/jsr305/ivy-1.3.9.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/google/code/findbugs/jsr305/1.3.9/jsr305-1.3.9.pom"/>
-				<caller organisation="org.apache.flink" name="flink-java" conf="compile, runtime" rev="1.3.9" rev-constraint-default="1.3.9" rev-constraint-dynamic="1.3.9" callerrev="1.16.0"/>
-				<caller organisation="org.apache.flink" name="flink-hadoop-fs" conf="compile, runtime" rev="1.3.9" rev-constraint-default="1.3.9" rev-constraint-dynamic="1.3.9" callerrev="1.16.0"/>
-				<caller organisation="org.apache.flink" name="flink-metrics-core" conf="compile, runtime" rev="1.3.9" rev-constraint-default="1.3.9" rev-constraint-dynamic="1.3.9" callerrev="1.16.0"/>
-				<caller organisation="org.apache.flink" name="flink-core" conf="compile, runtime" rev="1.3.9" rev-constraint-default="1.3.9" rev-constraint-dynamic="1.3.9" callerrev="1.16.0"/>
-				<caller organisation="org.apache.flink" name="flink-queryable-state-client-java" conf="compile, runtime" rev="1.3.9" rev-constraint-default="1.3.9" rev-constraint-dynamic="1.3.9" callerrev="1.16.0"/>
-				<caller organisation="org.apache.flink" name="flink-rpc-core" conf="compile, runtime" rev="1.3.9" rev-constraint-default="1.3.9" rev-constraint-dynamic="1.3.9" callerrev="1.16.0"/>
-				<caller organisation="org.apache.flink" name="flink-optimizer" conf="compile, runtime" rev="1.3.9" rev-constraint-default="1.3.9" rev-constraint-dynamic="1.3.9" callerrev="1.16.0"/>
-				<caller organisation="org.apache.flink" name="flink-streaming-java" conf="compile, runtime" rev="1.3.9" rev-constraint-default="1.3.9" rev-constraint-dynamic="1.3.9" callerrev="1.16.0"/>
-				<caller organisation="org.apache.flink" name="flink-annotations" conf="compile, runtime" rev="1.3.9" rev-constraint-default="1.3.9" rev-constraint-dynamic="1.3.9" callerrev="1.16.0"/>
-				<caller organisation="org.apache.flink" name="flink-rpc-akka-loader" conf="compile, runtime" rev="1.3.9" rev-constraint-default="1.3.9" rev-constraint-dynamic="1.3.9" callerrev="1.16.0"/>
-				<caller organisation="org.apache.flink" name="flink-json" conf="default, compile, runtime, master" rev="1.3.9" rev-constraint-default="1.3.9" rev-constraint-dynamic="1.3.9" callerrev="1.16.0"/>
-				<caller organisation="org.apache.flink" name="flink-file-sink-common" conf="compile, runtime" rev="1.3.9" rev-constraint-default="1.3.9" rev-constraint-dynamic="1.3.9" callerrev="1.16.0"/>
-				<caller organisation="org.apache.flink" name="flink-runtime" conf="compile, runtime" rev="1.3.9" rev-constraint-default="1.3.9" rev-constraint-dynamic="1.3.9" callerrev="1.16.0"/>
-				<caller organisation="org.apache.flink" name="flink-clients" conf="default, compile, runtime, master" rev="1.3.9" rev-constraint-default="1.3.9" rev-constraint-dynamic="1.3.9" callerrev="1.16.0"/>
+				<caller organisation="org.apache.flink" name="flink-annotations" conf="compile, runtime" rev="1.3.9" rev-constraint-default="1.3.9" rev-constraint-dynamic="1.3.9" callerrev="1.14.3"/>
+				<caller organisation="org.apache.flink" name="flink-file-sink-common" conf="compile, runtime" rev="1.3.9" rev-constraint-default="1.3.9" rev-constraint-dynamic="1.3.9" callerrev="1.14.3"/>
+				<caller organisation="org.apache.flink" name="flink-runtime" conf="compile, runtime" rev="1.3.9" rev-constraint-default="1.3.9" rev-constraint-dynamic="1.3.9" callerrev="1.14.3"/>
+				<caller organisation="org.apache.flink" name="flink-streaming-java_2.11" conf="compile, runtime" rev="1.3.9" rev-constraint-default="1.3.9" rev-constraint-dynamic="1.3.9" callerrev="1.14.3"/>
+				<caller organisation="org.apache.flink" name="flink-queryable-state-client-java" conf="compile, runtime" rev="1.3.9" rev-constraint-default="1.3.9" rev-constraint-dynamic="1.3.9" callerrev="1.14.3"/>
+				<caller organisation="org.apache.flink" name="flink-optimizer" conf="compile, runtime" rev="1.3.9" rev-constraint-default="1.3.9" rev-constraint-dynamic="1.3.9" callerrev="1.14.3"/>
+				<caller organisation="org.apache.flink" name="flink-java" conf="compile, runtime" rev="1.3.9" rev-constraint-default="1.3.9" rev-constraint-dynamic="1.3.9" callerrev="1.14.3"/>
+				<caller organisation="org.apache.flink" name="flink-scala_2.11" conf="compile, runtime" rev="1.3.9" rev-constraint-default="1.3.9" rev-constraint-dynamic="1.3.9" callerrev="1.14.3"/>
+				<caller organisation="org.apache.flink" name="flink-core" conf="compile, runtime" rev="1.3.9" rev-constraint-default="1.3.9" rev-constraint-dynamic="1.3.9" callerrev="1.14.3"/>
+				<caller organisation="org.apache.flink" name="flink-metrics-core" conf="compile, runtime" rev="1.3.9" rev-constraint-default="1.3.9" rev-constraint-dynamic="1.3.9" callerrev="1.14.3"/>
+				<caller organisation="org.apache.flink" name="flink-rpc-akka-loader" conf="compile, runtime" rev="1.3.9" rev-constraint-default="1.3.9" rev-constraint-dynamic="1.3.9" callerrev="1.14.3"/>
+				<caller organisation="org.apache.flink" name="flink-clients_2.11" conf="default, compile, runtime, master" rev="1.3.9" rev-constraint-default="1.3.9" rev-constraint-dynamic="1.3.9" callerrev="1.14.3"/>
+				<caller organisation="org.apache.flink" name="flink-rpc-core" conf="compile, runtime" rev="1.3.9" rev-constraint-default="1.3.9" rev-constraint-dynamic="1.3.9" callerrev="1.14.3"/>
+				<caller organisation="org.apache.flink" name="flink-hadoop-fs" conf="compile, runtime" rev="1.3.9" rev-constraint-default="1.3.9" rev-constraint-dynamic="1.3.9" callerrev="1.14.3"/>
 				<artifacts>
 					<artifact name="jsr305" type="jar" ext="jar" status="no" details="" size="33015" time="0" location="/home/alkhanafseh/.ivy2/cache/com.google.code.findbugs/jsr305/jars/jsr305-1.3.9.jar">
 						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/google/code/findbugs/jsr305/1.3.9/jsr305-1.3.9.jar"/>
@@ -637,45 +530,45 @@
 			</revision>
 		</module>
 		<module organisation="org.slf4j" name="slf4j-api">
-			<revision name="1.7.32" status="release" pubdate="20210720145654" resolver="sbt-chain" artresolver="sbt-chain" evicted="latest-revision" evicted-reason="" homepage="http://www.slf4j.org" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="-1">
+			<revision name="1.7.15" status="release" pubdate="20160209182958" resolver="sbt-chain" artresolver="sbt-chain" evicted="latest-revision" evicted-reason="" homepage="http://www.slf4j.org" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="-1">
 				<license name="MIT License" url="http://www.opensource.org/licenses/mit-license.php"/>
-				<metadata-artifact status="no" details="" size="5347" time="0" location="/home/alkhanafseh/.ivy2/cache/org.slf4j/slf4j-api/ivy-1.7.32.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/slf4j/slf4j-api/1.7.32/slf4j-api-1.7.32.pom"/>
+				<metadata-artifact status="no" details="" size="5199" time="0" location="/home/alkhanafseh/.ivy2/cache/org.slf4j/slf4j-api/ivy-1.7.15.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/slf4j/slf4j-api/1.7.15/slf4j-api-1.7.15.pom"/>
 				<evicted-by rev="1.7.36"/>
-				<caller organisation="org.apache.flink" name="flink-java" conf="compile, runtime" rev="1.7.32" rev-constraint-default="1.7.32" rev-constraint-dynamic="1.7.32" callerrev="1.16.0"/>
-				<caller organisation="org.apache.flink" name="flink-hadoop-fs" conf="compile, runtime" rev="1.7.32" rev-constraint-default="1.7.32" rev-constraint-dynamic="1.7.32" callerrev="1.16.0"/>
-				<caller organisation="org.apache.flink" name="flink-metrics-core" conf="compile, runtime" rev="1.7.32" rev-constraint-default="1.7.32" rev-constraint-dynamic="1.7.32" callerrev="1.16.0"/>
-				<caller organisation="org.apache.flink" name="flink-core" conf="compile, runtime" rev="1.7.32" rev-constraint-default="1.7.32" rev-constraint-dynamic="1.7.32" callerrev="1.16.0"/>
-				<caller organisation="org.apache.flink" name="flink-queryable-state-client-java" conf="compile, runtime" rev="1.7.32" rev-constraint-default="1.7.32" rev-constraint-dynamic="1.7.32" callerrev="1.16.0"/>
-				<caller organisation="org.apache.flink" name="flink-rpc-core" conf="compile, runtime" rev="1.7.32" rev-constraint-default="1.7.32" rev-constraint-dynamic="1.7.32" callerrev="1.16.0"/>
-				<caller organisation="org.apache.flink" name="flink-optimizer" conf="compile, runtime" rev="1.7.32" rev-constraint-default="1.7.32" rev-constraint-dynamic="1.7.32" callerrev="1.16.0"/>
-				<caller organisation="org.apache.flink" name="flink-streaming-java" conf="compile, runtime" rev="1.7.32" rev-constraint-default="1.7.32" rev-constraint-dynamic="1.7.32" callerrev="1.16.0"/>
-				<caller organisation="org.apache.flink" name="flink-annotations" conf="compile, runtime" rev="1.7.32" rev-constraint-default="1.7.32" rev-constraint-dynamic="1.7.32" callerrev="1.16.0"/>
-				<caller organisation="org.apache.flink" name="flink-rpc-akka-loader" conf="compile, runtime" rev="1.7.32" rev-constraint-default="1.7.32" rev-constraint-dynamic="1.7.32" callerrev="1.16.0"/>
-				<caller organisation="org.apache.flink" name="flink-json" conf="default, compile, runtime, master" rev="1.7.32" rev-constraint-default="1.7.32" rev-constraint-dynamic="1.7.32" callerrev="1.16.0"/>
-				<caller organisation="org.apache.flink" name="flink-file-sink-common" conf="compile, runtime" rev="1.7.32" rev-constraint-default="1.7.32" rev-constraint-dynamic="1.7.32" callerrev="1.16.0"/>
-				<caller organisation="org.apache.flink" name="flink-runtime" conf="compile, runtime" rev="1.7.32" rev-constraint-default="1.7.32" rev-constraint-dynamic="1.7.32" callerrev="1.16.0"/>
-				<caller organisation="org.apache.flink" name="flink-clients" conf="default, compile, runtime, master" rev="1.7.32" rev-constraint-default="1.7.32" rev-constraint-dynamic="1.7.32" callerrev="1.16.0"/>
+				<caller organisation="org.apache.flink" name="flink-annotations" conf="compile, runtime" rev="1.7.15" rev-constraint-default="1.7.15" rev-constraint-dynamic="1.7.15" callerrev="1.14.3"/>
+				<caller organisation="org.apache.flink" name="flink-file-sink-common" conf="compile, runtime" rev="1.7.15" rev-constraint-default="1.7.15" rev-constraint-dynamic="1.7.15" callerrev="1.14.3"/>
+				<caller organisation="org.apache.flink" name="flink-runtime" conf="compile, runtime" rev="1.7.15" rev-constraint-default="1.7.15" rev-constraint-dynamic="1.7.15" callerrev="1.14.3"/>
+				<caller organisation="org.apache.flink" name="flink-streaming-java_2.11" conf="compile, runtime" rev="1.7.15" rev-constraint-default="1.7.15" rev-constraint-dynamic="1.7.15" callerrev="1.14.3"/>
+				<caller organisation="org.apache.flink" name="flink-queryable-state-client-java" conf="compile, runtime" rev="1.7.15" rev-constraint-default="1.7.15" rev-constraint-dynamic="1.7.15" callerrev="1.14.3"/>
+				<caller organisation="org.apache.flink" name="flink-optimizer" conf="compile, runtime" rev="1.7.15" rev-constraint-default="1.7.15" rev-constraint-dynamic="1.7.15" callerrev="1.14.3"/>
+				<caller organisation="org.apache.flink" name="flink-java" conf="compile, runtime" rev="1.7.15" rev-constraint-default="1.7.15" rev-constraint-dynamic="1.7.15" callerrev="1.14.3"/>
+				<caller organisation="org.apache.flink" name="flink-scala_2.11" conf="compile, runtime" rev="1.7.15" rev-constraint-default="1.7.15" rev-constraint-dynamic="1.7.15" callerrev="1.14.3"/>
+				<caller organisation="org.apache.flink" name="flink-core" conf="compile, runtime" rev="1.7.15" rev-constraint-default="1.7.15" rev-constraint-dynamic="1.7.15" callerrev="1.14.3"/>
+				<caller organisation="org.apache.flink" name="flink-metrics-core" conf="compile, runtime" rev="1.7.15" rev-constraint-default="1.7.15" rev-constraint-dynamic="1.7.15" callerrev="1.14.3"/>
+				<caller organisation="org.apache.flink" name="flink-rpc-akka-loader" conf="compile, runtime" rev="1.7.15" rev-constraint-default="1.7.15" rev-constraint-dynamic="1.7.15" callerrev="1.14.3"/>
+				<caller organisation="org.apache.flink" name="flink-clients_2.11" conf="default, compile, runtime, master" rev="1.7.15" rev-constraint-default="1.7.15" rev-constraint-dynamic="1.7.15" callerrev="1.14.3"/>
+				<caller organisation="org.apache.flink" name="flink-rpc-core" conf="compile, runtime" rev="1.7.15" rev-constraint-default="1.7.15" rev-constraint-dynamic="1.7.15" callerrev="1.14.3"/>
+				<caller organisation="org.apache.flink" name="flink-hadoop-fs" conf="compile, runtime" rev="1.7.15" rev-constraint-default="1.7.15" rev-constraint-dynamic="1.7.15" callerrev="1.14.3"/>
 				<artifacts>
 				</artifacts>
 			</revision>
 			<revision name="1.7.36" status="release" pubdate="20220208163351" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://www.slf4j.org" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="5">
 				<license name="MIT License" url="http://www.opensource.org/licenses/mit-license.php"/>
 				<metadata-artifact status="no" details="" size="5582" time="0" location="/home/alkhanafseh/.ivy2/cache/org.slf4j/slf4j-api/ivy-1.7.36.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/slf4j/slf4j-api/1.7.36/slf4j-api-1.7.36.pom"/>
-				<caller organisation="org.apache.flink" name="flink-java" conf="compile, runtime" rev="1.7.32" rev-constraint-default="1.7.32" rev-constraint-dynamic="1.7.32" callerrev="1.16.0"/>
-				<caller organisation="org.apache.flink" name="flink-hadoop-fs" conf="compile, runtime" rev="1.7.32" rev-constraint-default="1.7.32" rev-constraint-dynamic="1.7.32" callerrev="1.16.0"/>
-				<caller organisation="org.apache.flink" name="flink-metrics-core" conf="compile, runtime" rev="1.7.32" rev-constraint-default="1.7.32" rev-constraint-dynamic="1.7.32" callerrev="1.16.0"/>
-				<caller organisation="org.apache.flink" name="flink-core" conf="compile, runtime" rev="1.7.32" rev-constraint-default="1.7.32" rev-constraint-dynamic="1.7.32" callerrev="1.16.0"/>
-				<caller organisation="org.apache.flink" name="flink-queryable-state-client-java" conf="compile, runtime" rev="1.7.32" rev-constraint-default="1.7.32" rev-constraint-dynamic="1.7.32" callerrev="1.16.0"/>
-				<caller organisation="org.apache.flink" name="flink-rpc-core" conf="compile, runtime" rev="1.7.32" rev-constraint-default="1.7.32" rev-constraint-dynamic="1.7.32" callerrev="1.16.0"/>
-				<caller organisation="org.apache.flink" name="flink-optimizer" conf="compile, runtime" rev="1.7.32" rev-constraint-default="1.7.32" rev-constraint-dynamic="1.7.32" callerrev="1.16.0"/>
-				<caller organisation="org.apache.flink" name="flink-streaming-java" conf="compile, runtime" rev="1.7.32" rev-constraint-default="1.7.32" rev-constraint-dynamic="1.7.32" callerrev="1.16.0"/>
-				<caller organisation="org.apache.flink" name="flink-annotations" conf="compile, runtime" rev="1.7.32" rev-constraint-default="1.7.32" rev-constraint-dynamic="1.7.32" callerrev="1.16.0"/>
-				<caller organisation="org.apache.flink" name="flink-rpc-akka-loader" conf="compile, runtime" rev="1.7.32" rev-constraint-default="1.7.32" rev-constraint-dynamic="1.7.32" callerrev="1.16.0"/>
-				<caller organisation="org.apache.flink" name="flink-json" conf="default, compile, runtime, master" rev="1.7.32" rev-constraint-default="1.7.32" rev-constraint-dynamic="1.7.32" callerrev="1.16.0"/>
-				<caller organisation="org.apache.flink" name="flink-file-sink-common" conf="compile, runtime" rev="1.7.32" rev-constraint-default="1.7.32" rev-constraint-dynamic="1.7.32" callerrev="1.16.0"/>
-				<caller organisation="org.apache.flink" name="flink-runtime" conf="compile, runtime" rev="1.7.32" rev-constraint-default="1.7.32" rev-constraint-dynamic="1.7.32" callerrev="1.16.0"/>
+				<caller organisation="org.apache.flink" name="flink-annotations" conf="compile, runtime" rev="1.7.15" rev-constraint-default="1.7.15" rev-constraint-dynamic="1.7.15" callerrev="1.14.3"/>
+				<caller organisation="org.apache.flink" name="flink-file-sink-common" conf="compile, runtime" rev="1.7.15" rev-constraint-default="1.7.15" rev-constraint-dynamic="1.7.15" callerrev="1.14.3"/>
+				<caller organisation="org.apache.flink" name="flink-runtime" conf="compile, runtime" rev="1.7.15" rev-constraint-default="1.7.15" rev-constraint-dynamic="1.7.15" callerrev="1.14.3"/>
+				<caller organisation="org.apache.flink" name="flink-streaming-java_2.11" conf="compile, runtime" rev="1.7.15" rev-constraint-default="1.7.15" rev-constraint-dynamic="1.7.15" callerrev="1.14.3"/>
+				<caller organisation="org.apache.flink" name="flink-queryable-state-client-java" conf="compile, runtime" rev="1.7.15" rev-constraint-default="1.7.15" rev-constraint-dynamic="1.7.15" callerrev="1.14.3"/>
+				<caller organisation="org.apache.flink" name="flink-optimizer" conf="compile, runtime" rev="1.7.15" rev-constraint-default="1.7.15" rev-constraint-dynamic="1.7.15" callerrev="1.14.3"/>
+				<caller organisation="org.apache.flink" name="flink-java" conf="compile, runtime" rev="1.7.15" rev-constraint-default="1.7.15" rev-constraint-dynamic="1.7.15" callerrev="1.14.3"/>
+				<caller organisation="org.apache.flink" name="flink-scala_2.11" conf="compile, runtime" rev="1.7.15" rev-constraint-default="1.7.15" rev-constraint-dynamic="1.7.15" callerrev="1.14.3"/>
+				<caller organisation="org.apache.flink" name="flink-core" conf="compile, runtime" rev="1.7.15" rev-constraint-default="1.7.15" rev-constraint-dynamic="1.7.15" callerrev="1.14.3"/>
+				<caller organisation="org.apache.flink" name="flink-metrics-core" conf="compile, runtime" rev="1.7.15" rev-constraint-default="1.7.15" rev-constraint-dynamic="1.7.15" callerrev="1.14.3"/>
+				<caller organisation="org.apache.flink" name="flink-rpc-akka-loader" conf="compile, runtime" rev="1.7.15" rev-constraint-default="1.7.15" rev-constraint-dynamic="1.7.15" callerrev="1.14.3"/>
+				<caller organisation="org.apache.flink" name="flink-clients_2.11" conf="default, compile, runtime, master" rev="1.7.15" rev-constraint-default="1.7.15" rev-constraint-dynamic="1.7.15" callerrev="1.14.3"/>
+				<caller organisation="org.apache.flink" name="flink-rpc-core" conf="compile, runtime" rev="1.7.15" rev-constraint-default="1.7.15" rev-constraint-dynamic="1.7.15" callerrev="1.14.3"/>
+				<caller organisation="org.apache.flink" name="flink-hadoop-fs" conf="compile, runtime" rev="1.7.15" rev-constraint-default="1.7.15" rev-constraint-dynamic="1.7.15" callerrev="1.14.3"/>
 				<caller organisation="org.apache.kafka" name="kafka-clients" conf="default, compile, runtime, master" rev="1.7.36" rev-constraint-default="1.7.36" rev-constraint-dynamic="1.7.36" callerrev="3.5.1"/>
-				<caller organisation="org.apache.flink" name="flink-clients" conf="default, compile, runtime, master" rev="1.7.32" rev-constraint-default="1.7.32" rev-constraint-dynamic="1.7.32" callerrev="1.16.0"/>
 				<artifacts>
 					<artifact name="slf4j-api" type="jar" ext="jar" status="no" details="" size="41125" time="0" location="/home/alkhanafseh/.ivy2/cache/org.slf4j/slf4j-api/jars/slf4j-api-1.7.36.jar">
 						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/slf4j/slf4j-api/1.7.36/slf4j-api-1.7.36.jar"/>
@@ -699,7 +592,7 @@
 			<revision name="1.8.0" status="release" pubdate="20210619093134" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://github.com/lz4/lz4-java" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="3">
 				<license name="The Apache Software License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
 				<metadata-artifact status="no" details="" size="2736" time="0" location="/home/alkhanafseh/.ivy2/cache/org.lz4/lz4-java/ivy-1.8.0.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/lz4/lz4-java/1.8.0/lz4-java-1.8.0.pom"/>
-				<caller organisation="org.apache.flink" name="flink-runtime" conf="compile, runtime" rev="1.8.0" rev-constraint-default="1.8.0" rev-constraint-dynamic="1.8.0" callerrev="1.16.0"/>
+				<caller organisation="org.apache.flink" name="flink-runtime" conf="compile, runtime" rev="1.8.0" rev-constraint-default="1.8.0" rev-constraint-dynamic="1.8.0" callerrev="1.14.3"/>
 				<caller organisation="org.apache.kafka" name="kafka-clients" conf="default, compile, runtime, master" rev="1.8.0" rev-constraint-default="1.8.0" rev-constraint-dynamic="1.8.0" callerrev="3.5.1"/>
 				<artifacts>
 					<artifact name="lz4-java" type="jar" ext="jar" status="no" details="" size="682804" time="0" location="/home/alkhanafseh/.ivy2/cache/org.lz4/lz4-java/jars/lz4-java-1.8.0.jar">
@@ -721,20 +614,18 @@
 			</revision>
 		</module>
 		<module organisation="org.scala-lang" name="scala-library">
-			<revision name="2.12.8" status="release" pubdate="20181204131556" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://www.scala-lang.org/" extra-info.apiURL="http://www.scala-lang.org/api/2.12.8/" downloaded="false" searched="false" default="false" conf="default, compile, runtime(*), master(compile), runtime, default(compile), compile(*), master" position="0">
-				<license name="Apache-2.0" url="https://www.apache.org/licenses/LICENSE-2.0"/>
-				<metadata-artifact status="no" details="" size="2656" time="0" location="/home/alkhanafseh/.ivy2/cache/org.scala-lang/scala-library/ivy-2.12.8.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/scala-lang/scala-library/2.12.8/scala-library-2.12.8.pom"/>
-				<caller organisation="com.typesafe.play" name="play-json_2.12" conf="default, compile, runtime, master" rev="2.12.8" rev-constraint-default="2.12.8" rev-constraint-dynamic="2.12.8" callerrev="2.10.0-RC9"/>
-				<caller organisation="com.typesafe.play" name="play-functional_2.12" conf="compile, runtime" rev="2.12.8" rev-constraint-default="2.12.8" rev-constraint-dynamic="2.12.8" callerrev="2.10.0-RC9"/>
-				<caller organisation="org.scala-lang" name="scala-reflect" conf="compile, runtime" rev="2.12.8" rev-constraint-default="2.12.8" rev-constraint-dynamic="2.12.8" callerrev="2.12.8"/>
-				<caller organisation="org.json4s" name="json4s-core_2.12" conf="compile, runtime" rev="2.12.8" rev-constraint-default="2.12.8" rev-constraint-dynamic="2.12.8" callerrev="3.6.6"/>
-				<caller organisation="org.json4s" name="json4s-scalap_2.12" conf="compile, runtime" rev="2.12.8" rev-constraint-default="2.12.8" rev-constraint-dynamic="2.12.8" callerrev="3.6.6"/>
-				<caller organisation="org.json4s" name="json4s-ast_2.12" conf="compile, runtime" rev="2.12.8" rev-constraint-default="2.12.8" rev-constraint-dynamic="2.12.8" callerrev="3.6.6"/>
-				<caller organisation="org.example" name="flink-project" conf="test, compile, runtime" rev="2.12.8" rev-constraint-default="2.12.8" rev-constraint-dynamic="2.12.8" callerrev="0.1-SNAPSHOT"/>
-				<caller organisation="org.json4s" name="json4s-native_2.12" conf="default, compile, runtime, master" rev="2.12.8" rev-constraint-default="2.12.8" rev-constraint-dynamic="2.12.8" callerrev="3.6.6"/>
+			<revision name="2.11.8" status="release" pubdate="20160304172633" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://www.scala-lang.org/" extra-info.apiURL="http://www.scala-lang.org/api/2.11.8/" downloaded="false" searched="false" default="false" conf="default, compile, runtime(*), master(compile), runtime, default(compile), compile(*), master" position="0">
+				<license name="BSD 3-Clause" url="http://www.scala-lang.org/license.html"/>
+				<metadata-artifact status="no" details="" size="2653" time="0" location="/home/alkhanafseh/.ivy2/cache/org.scala-lang/scala-library/ivy-2.11.8.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/scala-lang/scala-library/2.11.8/scala-library-2.11.8.pom"/>
+				<caller organisation="org.apache.flink" name="flink-scala_2.11" conf="compile, runtime" rev="2.11.8" rev-constraint-default="2.11.8" rev-constraint-dynamic="2.11.8" callerrev="1.14.3"/>
+				<caller organisation="org.scala-lang" name="scala-compiler" conf="compile, runtime" rev="2.11.8" rev-constraint-default="2.11.8" rev-constraint-dynamic="2.11.8" callerrev="2.11.8"/>
+				<caller organisation="org.scala-lang.modules" name="scala-parser-combinators_2.11" conf="compile, runtime" rev="2.11.8" rev-constraint-default="2.11.8" rev-constraint-dynamic="2.11.8" callerrev="1.0.4"/>
+				<caller organisation="org.scala-lang.modules" name="scala-xml_2.11" conf="compile, runtime" rev="2.11.8" rev-constraint-default="2.11.8" rev-constraint-dynamic="2.11.8" callerrev="1.0.4"/>
+				<caller organisation="org.example" name="flink-project" conf="test, compile, runtime" rev="2.11.8" rev-constraint-default="2.11.8" rev-constraint-dynamic="2.11.8" callerrev="0.1-SNAPSHOT"/>
+				<caller organisation="org.scala-lang" name="scala-reflect" conf="compile, runtime" rev="2.11.8" rev-constraint-default="2.11.8" rev-constraint-dynamic="2.11.8" callerrev="2.11.8"/>
 				<artifacts>
-					<artifact name="scala-library" type="jar" ext="jar" status="no" details="" size="5272591" time="0" location="/home/alkhanafseh/.ivy2/cache/org.scala-lang/scala-library/jars/scala-library-2.12.8.jar">
-						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/scala-lang/scala-library/2.12.8/scala-library-2.12.8.jar"/>
+					<artifact name="scala-library" type="jar" ext="jar" status="no" details="" size="5744974" time="0" location="/home/alkhanafseh/.ivy2/cache/org.scala-lang/scala-library/jars/scala-library-2.11.8.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/scala-lang/scala-library/2.11.8/scala-library-2.11.8.jar"/>
 					</artifact>
 				</artifacts>
 			</revision>

@@ -1,74 +1,106 @@
 package org.apache.flink
-import org.apache.flink.connector.kafka.sink.{KafkaRecordSerializationSchema, KafkaSink}
-import org.apache.flink.api.common.serialization.{DeserializationSchema, SerializationSchema}
-import org.apache.flink.streaming.api.scala._
-import org.apache.flink.connector.kafka.source.{KafkaSource, KafkaSourceBuilder}
-import org.apache.flink.streaming.connectors.kafka.FlinkKafkaConsumer
-import org.apache.flink.streaming.util.serialization.JSONKeyValueDeserializationSchema
-import java.util.Properties
-import org.json4s.Formats
-import org.apache.flink.streaming.api.windowing.windows.TimeWindow
 import org.apache.flink.api.common.serialization.SimpleStringSchema
-import org.apache.flink.formats.json.JsonDeserializationSchema
-import org.apache.flink.connector.kafka.source.KafkaSource
 import org.apache.flink.streaming.api.TimeCharacteristic
 import org.apache.flink.streaming.api.scala._
-import org.apache.flink.streaming.api.windowing.assigners.TumblingEventTimeWindows
-import org.apache.flink.streaming.api.windowing.assigners.SlidingEventTimeWindows
-import org.apache.flink.streaming.api.windowing.assigners.SlidingProcessingTimeWindows
+import org.apache.flink.streaming.api.windowing.assigners.TumblingProcessingTimeWindows 
 import org.apache.flink.streaming.api.windowing.time.Time
 import org.apache.flink.streaming.connectors.kafka.{FlinkKafkaConsumer, FlinkKafkaProducer}
-import org.apache.flink.util.Collector
-import org.apache.flink.streaming.api.functions.windowing.WindowFunction
-import org.apache.flink.api.common.eventtime.WatermarkStrategy
-import org.apache.flink.connector.kafka.source.enumerator.initializer.OffsetsInitializer
-import java.time.Duration
+import org.apache.flink.streaming.api.functions.sink.filesystem.StreamingFileSink;
 import java.util.Properties
-
-import org.json4s._
-import org.json4s.native.JsonMethods
 
 object flinkKafkaScalaTutorial {
 
-  case class Order(customer_id: String, location: String, order_date: String, order_id: String, price: String, product_id: String, seller_id: String, status: String)
-
   def main(args: Array[String]): Unit = {
-          implicit val formats: Formats = DefaultFormats
-
-          val env = StreamExecutionEnvironment.getExecutionEnvironment
-          env.setStreamTimeCharacteristic(TimeCharacteristic.EventTime)
-          env.enableCheckpointing(100);
-          env.getConfig.setAutoWatermarkInterval(5000L); // poll watermark every second
-
-          // prepare kafka sources (producers)
-          val properties = new Properties()
-          properties.setProperty("bootstrap.servers", "localhost:9092")
-          properties.setProperty("group.id", "flink-consumer-group")
-
-          val topic1 = "orders"
-          val kafkaConsumer1 = new FlinkKafkaConsumer[String](topic1, new SimpleStringSchema(), properties)
-
-	  val kafkaConsumer11 = kafkaConsumer1.assignTimestampsAndWatermarks(
-	     WatermarkStrategy.forBoundedOutOfOrderness[String](Duration.ofMinutes(1)))
 
 
-          val ordersSource: DataStream[String] = env.addSource(kafkaConsumer11)
+	// define kafka topics
+	val netflow_topic = "netflow"
+	val cdr_topic = "cdr"
+	val result_topic = "result"
 
-          val ordersStream = ordersSource.flatMap(raw => parseOrder(raw))
+	// prepare apache flink enviroment
+	val env = StreamExecutionEnvironment.getExecutionEnvironment
+	env.setStreamTimeCharacteristic(TimeCharacteristic.EventTime)
 
-	  ordersStream.print()
-          ordersStream.print
-          println(ordersStream)
-          env.execute("Yousef Trendyol Data Engineer Case")
-}
-  def parseOrder(raw: String): Option[Order] = {
-    implicit val formats: Formats = DefaultFormats
-    try {
-      val json = JsonMethods.parse(raw)
-      Some(json.extract[Order])
-    } catch {
-      case _: Throwable => None
-    }
+	// prepare kafka consumers properties
+	val properties = new Properties()
+	properties.setProperty("bootstrap.servers", "localhost:9092")
+	properties.setProperty("group.id", "flink-consumer-group")
+	properties.setProperty("auto.offset.reset", "earliest")
+
+	// prepare kafka cdr consumer
+	val cdrConsumer = new FlinkKafkaConsumer[String](cdr_topic, new SimpleStringSchema(), properties)
+	val cdrSource: DataStream[String] = env.addSource(cdrConsumer)
+
+	// modify the schema of cdr stream
+	val cdrStream = cdrSource
+	    .map { jsonString =>
+	    val fields = jsonString.split(",")
+	    val CUSTOMER_ID = fields(0)
+	    val PRIVATE_IP = fields(1)
+	    val START_REAL_PORT = fields(2)
+	    val END_REAL_PORT = fields(3)
+	    val START_DATETIME = fields(4)
+	    val END_DATETIME = fields(5)
+	    (CUSTOMER_ID, PRIVATE_IP, START_REAL_PORT, END_REAL_PORT, START_DATETIME, END_DATETIME)}
+
+	// prepare kafka netflow consumer
+	val netflowConsumer = new FlinkKafkaConsumer[String](netflow_topic, new SimpleStringSchema(), properties)
+	val netflowSource: DataStream[String] = env.addSource(netflowConsumer)
+
+	// modify the schema of netflow stream
+	val netflowStream = netflowSource
+	    .map { jsonString =>
+	    val fields = jsonString.split(",")
+	    val NETFLOW_DATETIME = fields(0)
+	    val SOURCE_ADDRESS = fields(1)
+	    val SOURCE_PORT = fields(2)
+	    val IN_BYTES = fields(3)
+	    (NETFLOW_DATETIME, SOURCE_ADDRESS, SOURCE_PORT, IN_BYTES)}
+
+	// join netflow and cdr streams based on the 2nd fields (SOURCE_ADDRESS and PRIVATE_IP), respectively.
+	val joinedDataSet = netflowStream
+	  .join(cdrStream)
+	  .where(netflow => netflow._2)
+	  .equalTo(cdr => cdr._2)
+	   .window(TumblingProcessingTimeWindows.of(Time.minutes(1)))
+	   .apply { (netflow, cdr) =>
+	     (netflow._1.toInt, netflow._3.toInt,  netflow._4.toInt, cdr._1, cdr._3.toInt, cdr._4.toInt, cdr._5.toInt, cdr._6.toInt) // (NETFLOW_DATETIME, SOURCE_PORT, IN_BYTES, CUSTOMER_ID, START_REAL_PORT, END_REAL_PORT, START_DATETIME, END_DATETIME)
+	   }
+
+	// take observations which achive the following crateria:
+	// A. NETFLOW_DATETIME betwen START_DATETIME and END_DATETIME
+	// B. SOURCE_PORT between START_REAL_PORT and END_REAL_PORT
+	// at the same time, aggregate the observations based on CUSTOMER_ID column and sum their IN_BYTES column
+	val resultStream = joinedDataSet.filter{
+	    x =>
+	        x._1 >= x._7 &&
+	        x._1 <= x._8 &&
+	        x._2 >= x._5 &&
+	        x._2 <= x._6
+	    }.keyBy(3).sum(2).map { line =>
+	    (line._4, line._3.toString)
+	  }
+
+	// print the result
+	resultStream.print()
+
+
+	// prepare kafka producer properties
+	val kafkaProducerProperties = new Properties()
+	kafkaProducerProperties.setProperty("bootstrap.servers", "localhost:9092")
+
+	// define kafka producer
+	val kafkaProducer = new FlinkKafkaProducer[String](
+	        result_topic,
+	        new SimpleStringSchema(),
+	        kafkaProducerProperties)
+
+	// sink resulted data to kafka "result" topic
+	resultStream.map(x => x._1 + "," + x._2).addSink(kafkaProducer)
+
+	// execute this code with the title of "Real-Time Stream Processing Using Flink and Kafka with Scala and Zeppelin (Part 2): Case Study"
+	env.execute("Real-Time Stream Processing Using Flink and Kafka with Scala and Zeppelin (Part 2): Case Study")
   }
 
 }
