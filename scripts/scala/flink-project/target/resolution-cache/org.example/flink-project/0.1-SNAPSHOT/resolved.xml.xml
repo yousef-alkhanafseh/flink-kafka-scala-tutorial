@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ivy-module version="2.0" xmlns:e="http://ant.apache.org/ivy/extra">
+	<info organisation="org.example"
+		module="flink-project"
+		revision="0.1-SNAPSHOT"
+		status="integration"
+		publication="20230823212713"
+	>
+		<description>
+		Flink Project
+		</description>
+	</info>
+	<configurations>
+		<conf name="compile" visibility="public" description=""/>
+		<conf name="runtime" visibility="public" description="" extends="compile"/>
+		<conf name="test" visibility="public" description="" extends="runtime"/>
+		<conf name="provided" visibility="public" description=""/>
+		<conf name="optional" visibility="public" description=""/>
+		<conf name="compile-internal" visibility="private" description="" extends="compile,optional,provided"/>
+		<conf name="runtime-internal" visibility="private" description="" extends="runtime,optional"/>
+		<conf name="test-internal" visibility="private" description="" extends="test,optional,provided"/>
+		<conf name="plugin" visibility="private" description=""/>
+		<conf name="pom" visibility="public" description=""/>
+		<conf name="scala-tool" visibility="private" description=""/>
+	</configurations>
+	<publications>
+		<artifact name="flink-project" type="pom" ext="pom" conf="pom"/>
+		<artifact name="flink-project" type="jar" ext="jar" conf="compile"/>
+		<artifact name="flink-project" type="src" ext="jar" conf="compile" e:classifier="sources"/>
+		<artifact name="flink-project" type="doc" ext="jar" conf="compile" e:classifier="javadoc"/>
+	</publications>
+	<dependencies>
+		<dependency org="org.scala-lang" name="scala-compiler" rev="2.12.8" conf="scala-tool->default,optional(default)"/>
+		<dependency org="org.scala-lang" name="scala-library" rev="2.12.8" conf="scala-tool->default,optional(default);compile->default(compile)"/>
+		<dependency org="org.apache.flink" name="flink-scala_2.12" rev="1.16.0" conf="provided->default(compile)"/>
+		<dependency org="org.apache.flink" name="flink-streaming-scala_2.12" rev="1.16.0" conf="provided->default(compile)"/>
+		<dependency org="org.apache.flink" name="flink-connector-kafka" rev="1.16.0" conf="provided->default(compile)"/>
+		<dependency org="org.apache.flink" name="flink-core" rev="1.16.0" conf="provided->default(compile)"/>
+		<dependency org="org.apache.kafka" name="kafka-clients" rev="3.5.1" conf="compile->default(compile)"/>
+		<dependency org="org.apache.flink" name="flink-clients" rev="1.16.0" conf="compile->default(compile)"/>
+		<dependency org="org.apache.flink" name="flink-json" rev="1.16.0" conf="compile->default(compile)"/>
+		<dependency org="org.json4s" name="json4s-native_2.12" rev="3.6.6" conf="compile->default(compile)"/>
+		<dependency org="com.typesafe.play" name="play-json_2.12" rev="2.10.0-RC9" conf="compile->default(compile)"/>
+	</dependencies>
+</ivy-module>

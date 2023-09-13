@@ -1,0 +1,23 @@
+[0m[[0m[0minfo[0m] [0m[0mPackaging /home/alkhanafseh/yousef-alkhanafseh-dataeng-case/yousefAnwsers/solutions/flink-project/target/flink-project-0.1-SNAPSHOT.jar ...[0m
+[0m[[0m[0mdebug[0m] [0m[0mInput file mappings:[0m
+[0m[[0m[0mdebug[0m] [0m[0m	org/apache/flink/problemTwoSolver$$anon$1$$anon$2.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /home/alkhanafseh/yousef-alkhanafseh-dataeng-case/yousefAnwsers/solutions/flink-project/target/classes/org/apache/flink/problemTwoSolver$$anon$1$$anon$2.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	org/apache/flink/problemTwoSolver$$anon$1.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /home/alkhanafseh/yousef-alkhanafseh-dataeng-case/yousefAnwsers/solutions/flink-project/target/classes/org/apache/flink/problemTwoSolver$$anon$1.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	org[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /home/alkhanafseh/yousef-alkhanafseh-dataeng-case/yousefAnwsers/solutions/flink-project/target/classes/org[0m
+[0m[[0m[0mdebug[0m] [0m[0m	org/apache[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /home/alkhanafseh/yousef-alkhanafseh-dataeng-case/yousefAnwsers/solutions/flink-project/target/classes/org/apache[0m
+[0m[[0m[0mdebug[0m] [0m[0m	org/apache/flink/problemTwoSolver$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /home/alkhanafseh/yousef-alkhanafseh-dataeng-case/yousefAnwsers/solutions/flink-project/target/classes/org/apache/flink/problemTwoSolver$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	org/apache/flink/problemTwoSolver$Order$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /home/alkhanafseh/yousef-alkhanafseh-dataeng-case/yousefAnwsers/solutions/flink-project/target/classes/org/apache/flink/problemTwoSolver$Order$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	log4j.properties[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /home/alkhanafseh/yousef-alkhanafseh-dataeng-case/yousefAnwsers/solutions/flink-project/target/classes/log4j.properties[0m
+[0m[[0m[0mdebug[0m] [0m[0m	org/apache/flink/problemTwoSolver.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /home/alkhanafseh/yousef-alkhanafseh-dataeng-case/yousefAnwsers/solutions/flink-project/target/classes/org/apache/flink/problemTwoSolver.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	org/apache/flink[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /home/alkhanafseh/yousef-alkhanafseh-dataeng-case/yousefAnwsers/solutions/flink-project/target/classes/org/apache/flink[0m
+[0m[[0m[0mdebug[0m] [0m[0m	org/apache/flink/problemTwoSolver$Order.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /home/alkhanafseh/yousef-alkhanafseh-dataeng-case/yousefAnwsers/solutions/flink-project/target/classes/org/apache/flink/problemTwoSolver$Order.class[0m
+[0m[[0m[0minfo[0m] [0m[0mDone packaging.[0m
