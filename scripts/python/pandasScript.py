@@ -29,9 +29,6 @@ final_df["IN_BYTES"] = final_df["IN_BYTES"].astype(float)
 # Group by the df based on CUSTOMER_ID column and sum the IN_BYTES column
 final_df = final_df.groupby(["CUSTOMER_ID"], as_index=False).agg(sumOutBytes = ("IN_BYTES", "sum"))
 
-# Convert the obtained column from Bytes to MegaBytes
-final_df["sumOutBytes"] = final_df["sumOutBytes"] / (1024 * 1024)
-
 # Print the first 5 rows of the obtained result
 print(final_df.head(5))
 
